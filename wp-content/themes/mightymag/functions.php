@@ -352,8 +352,8 @@ function mgm_autoCompileLess($inputFile, $outputFile) {
   $newCache = $less->cachedCompile($cache);
 
   if (!is_array($cache) || $newCache["updated"] > $cache["updated"]) {
-    file_put_contents($cacheFile, serialize($newCache));
-    file_put_contents($outputFile, $newCache['compiled']);
+    //file_put_contents($cacheFile, serialize($newCache));
+    //file_put_contents($outputFile, $newCache['compiled']);
   }
 }
 
