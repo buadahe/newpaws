@@ -1,0 +1,683 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BWL Pro Voting Manager\n"
+"POT-Creation-Date: 2014-11-07 00:37+0600\n"
+"PO-Revision-Date: 2014-11-07 00:37+0600\n"
+"Last-Translator: \n"
+"Language-Team: BlueWindLab <bluewindlab@gmail.com>\n"
+"Language: en_EN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.6.9\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: ..\n"
+
+#: ../includes/pvm-custom-column.php:46
+msgid "Like"
+msgstr ""
+
+#: ../includes/pvm-custom-column.php:47
+msgid "Dislike"
+msgstr ""
+
+#: ../includes/pvm-custom-column.php:48
+msgid "Feedback"
+msgstr ""
+
+#: ../includes/pvm-custom-column.php:49
+msgid "Voting <br /> Status"
+msgstr ""
+
+#: ../includes/pvm-custom-column.php:86 ../includes/pvm-quick-edit.php:28
+msgid "Closed"
+msgstr ""
+
+#: ../includes/pvm-custom-column.php:90
+#: ../includes/pvm-custom-meta-box.php:194 ../includes/pvm-quick-edit.php:27
+msgid "Show"
+msgstr ""
+
+#: ../includes/pvm-custom-column.php:94 ../includes/pvm-quick-edit.php:26
+msgid "Hidden"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:188
+msgid "Display Voting Box: "
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:193
+msgid "Hide"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:195
+msgid "Voting Closed"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:202
+msgid "Voting Bar Type: "
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:207
+msgid "Static"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:208
+msgid "Animated"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:215
+msgid "Like Bar Theme: "
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:220
+#: ../includes/pvm-custom-meta-box.php:241
+#: ../tinymce/bwl_pvm_shortcode_editor.php:313
+msgid "Red Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:221
+#: ../includes/pvm-custom-meta-box.php:242
+#: ../tinymce/bwl_pvm_shortcode_editor.php:314
+msgid "Blue Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:222
+#: ../includes/pvm-custom-meta-box.php:243
+#: ../tinymce/bwl_pvm_shortcode_editor.php:315
+msgid "Green Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:223
+#: ../includes/pvm-custom-meta-box.php:244
+#: ../tinymce/bwl_pvm_shortcode_editor.php:316
+msgid "Orange Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:224
+#: ../includes/pvm-custom-meta-box.php:245
+#: ../tinymce/bwl_pvm_shortcode_editor.php:317
+msgid "Pink Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:225
+#: ../includes/pvm-custom-meta-box.php:246
+#: ../tinymce/bwl_pvm_shortcode_editor.php:318
+msgid "Yellow Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:226
+#: ../includes/pvm-custom-meta-box.php:247
+#: ../tinymce/bwl_pvm_shortcode_editor.php:319
+msgid "Yellow Green Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:227
+#: ../includes/pvm-custom-meta-box.php:248
+#: ../tinymce/bwl_pvm_shortcode_editor.php:320
+msgid "brown Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:228
+#: ../includes/pvm-custom-meta-box.php:249
+#: ../tinymce/bwl_pvm_shortcode_editor.php:321
+msgid "Chocolate Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:229
+#: ../includes/pvm-custom-meta-box.php:250
+#: ../tinymce/bwl_pvm_shortcode_editor.php:322
+msgid "Crimson Theme"
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:236
+msgid "Dislike Bar Theme: "
+msgstr ""
+
+#: ../includes/pvm-custom-meta-box.php:256
+msgid "Voting Feedbacks"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:26
+msgid " Please Write Your Feedback Message"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:27
+msgid "Thanks for your feedback!"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:28
+msgid "Unable to receive your feedback. Please try again !"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:29
+msgid " Incorrect Captcha Value!"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:31
+msgid "Please Wait ....."
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:156
+msgid " LogIn Required To submit vote!"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:218
+msgid " Thanks for your vote!"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:226
+msgid " You have already submitted your vote!"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:309
+msgid "New Feedback Submited!"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:312
+msgid "Hello Administrator"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:312
+msgid "A new Feedback has been submitted by a user."
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:313
+msgid "Submitted Feedback"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:315
+msgid "Review Feedback"
+msgstr ""
+
+#: ../includes/pvm-vote-counter.php:316
+msgid "Thank You!"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:403
+msgid "Allowed Files"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:633
+#: ../option-panel/admin-page-class/admin-page-class.php:635
+msgid "Insert into Post"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:633
+msgid "Use this File"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:635
+msgid "Use this Image"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:667
+#: ../option-panel/admin-page-class/admin-page-class.php:766
+msgid "Save Changes"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:680
+msgid "Settings saved."
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1141
+msgid "Delete this image"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1141
+#: ../option-panel/admin-page-class/admin-page-class.php:1836
+msgid "Delete"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1236
+msgid "Cannot delete file. Something's wrong."
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1441
+#: ../option-panel/admin-page-class/admin-page-class.php:1486
+msgid "Remove"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1453
+msgid "Add"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1627
+msgid "Select Files"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1832
+msgid "Uploaded files"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1843
+msgid "Upload new files"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1849
+msgid "Add more files"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1869
+#: ../option-panel/admin-page-class/admin-page-class.php:1902
+msgid "Delete Image"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1874
+#: ../option-panel/admin-page-class/admin-page-class.php:1907
+msgid "Upload Image"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:1984
+#: ../option-panel/admin-page-class/admin-page-class.php:2010
+msgid "Select a color"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3238
+msgid "Export"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3239
+msgid ""
+"To export saved settings click the Export button bellow and you will get the "
+"export Code in the box bellow, which you can later use to import."
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3241
+msgid "Export Code"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3243
+msgid "Get Export"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3248
+#: ../option-panel/admin-page-class/admin-page-class.php:3253
+msgid "Import"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3249
+msgid ""
+"To Import saved settings paste the Export output in to the Import Code box "
+"bellow and click Import."
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3251
+msgid "Import Code"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3278
+msgid "error in ajax request! (1)"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3288
+msgid "error in ajax request! (2)"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3309
+msgid "error in ajax request! (3)"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3321
+msgid "Setting imported, make sure you "
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3321
+msgid "Refresh this page"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3323
+msgid "Could not import settings! (4)"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3344
+msgid "You do not have sufficient permissions to edit templates for this site."
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3347
+msgid "Error Downloading file."
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3369
+#: ../option-panel/admin-page-class/admin-page-class.php:3372
+msgid "Download Export"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3439
+msgid "Not Valid "
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3457
+msgid "Errors in saving changes"
+msgstr ""
+
+#: ../option-panel/admin-page-class/admin-page-class.php:3482
+msgid "Unkown Error"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-menu.php:10
+msgid "Voting Manager Option Panel"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-menu.php:11
+msgid "Voting Manager"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:16
+msgid "Option Panel"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:36
+msgid "General"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:37
+msgid "Theme Options"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:38
+#: ../option-panel/plugin-option-panel-settings.php:224
+msgid "Tipsy Options"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:39
+msgid "Advanced Options"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:49
+msgid "General Options"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:52
+msgid "Login Required? "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:55
+msgid "Load Font Awesome "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:58
+msgid "Feedback Form Title"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:58
+msgid "Tell us how can we improve this post?"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:61
+msgid "Send Feedback Message To Admin"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:64
+msgid "Admin Email "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:69
+msgid "Voting Interval "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:71
+msgid ""
+"e.g: we set 120 min(2 hours) interval between repeated votes in a same post"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:73
+msgid "must be number. e.g: 120"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:93
+msgid "Theme Settings"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:111
+msgid "Like Thumb Icon"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:115
+msgid "Like Thumb Color"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:118
+msgid "Upload Like Icon "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:124
+msgid "Upload Custom Like Icon? "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:125
+msgid ""
+"<small>You can upload custom icon for like button. Best size 16x16 PX</small>"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:131
+msgid "Disable Feedback From? "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:134
+msgid "Disable Down Vote? "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:147
+msgid "Dislike Thumb Icon"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:152
+msgid "Dislike Thumb Color "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:155
+msgid "Upload Dislike Icon "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:160
+msgid "Upload Custom Dislike Icon? "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:161
+msgid ""
+"<small>You can upload custom icon for dislike button. Best size 16x16 PX</"
+"small>"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:167
+msgid "Disable Voting Bar? "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:167
+msgid "<small>You can disable display voting bar.</small>"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:170
+msgid "Like Bar Color"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:173
+msgid "Dislike Bar Color "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:188
+msgid "Advance Setting"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:191
+msgid "IP Filter Status: "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:193
+msgid "You can filter where you want to show automated voting interface."
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:207
+msgid "Custom CSS "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:207
+msgid "You can write custom css code in here."
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:210
+msgid "Auto Update Notification: "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:227
+msgid "Show Tool Tip "
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:230
+msgid "Like Hover Title"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:230
+msgid "Like The Post"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:233
+msgid "Dislike Hover Title"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:233
+msgid "Dislike The Post"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:236
+msgid "Tipsy Background"
+msgstr ""
+
+#: ../option-panel/plugin-option-panel-settings.php:239
+msgid "Tipsy Text Color"
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:59
+msgid "Voting Closed !"
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:217
+msgid "Loading ....."
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:302
+msgid "Total"
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:302 ../shortcode/pvm-shortcodes.php:538
+msgid "Votes"
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:318
+msgid "Captcha:"
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:323
+msgid "Verify Human or Spambot ?"
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:335
+msgid "Write feedback message ..... "
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:340
+msgid "Submit"
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:520 ../widget/pvm-widget.php:256
+msgid "No Post Found!"
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:536
+msgid "Position"
+msgstr ""
+
+#: ../shortcode/pvm-shortcodes.php:537 ../widget/pvm-widget.php:51
+msgid "Title"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:234
+msgid "BPVM Shortcode Editor"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:240
+msgid "Selection Type"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:250
+msgid "Post Type"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:252
+#: ../tinymce/bwl_pvm_shortcode_editor.php:297
+#: ../tinymce/bwl_pvm_shortcode_editor.php:329
+#: ../tinymce/bwl_pvm_shortcode_editor.php:339
+msgid "Select"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:266 ../widget/pvm-widget.php:84
+msgid "Gallery posts"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:272
+msgid "Display Thumbnail"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:279
+msgid "Day Filter"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:285
+msgid "Day Interval"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:290
+msgid "Post Display Limit"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:295
+msgid "Order By"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:298 ../widget/pvm-widget.php:94
+msgid "Liked"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:299 ../widget/pvm-widget.php:95
+msgid "Disliked"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:305
+msgid "Voting Bar Animation"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:327
+msgid "Like Bar Theme"
+msgstr ""
+
+#: ../tinymce/bwl_pvm_shortcode_editor.php:337
+msgid "Dislike Bar Theme"
+msgstr ""
+
+#: ../widget/pvm-widget.php:25
+msgid "BWL Voting Manager"
+msgstr ""
+
+#: ../widget/pvm-widget.php:28
+msgid "Display Top Voted Posts In sidebar area"
+msgstr ""
+
+#: ../widget/pvm-widget.php:37
+msgid "Top Liked Posts"
+msgstr ""
+
+#: ../widget/pvm-widget.php:62
+msgid "Post Type:"
+msgstr ""
+
+#: ../widget/pvm-widget.php:92
+msgid "Order Type:"
+msgstr ""
+
+#: ../widget/pvm-widget.php:101
+msgid "No Of Posts"
+msgstr ""

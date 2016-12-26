@@ -1,0 +1,264 @@
+/*------------------------------ Button Container ---------------------------------*/
+
+.bwl_pvm_container{
+       width: 100%;
+       border-bottom: #eeeeee 1px solid; border-top: #eeeeee 1px solid;
+       display: block;
+       float: left;
+       margin: 12px 0;
+       padding: 5px 0;
+}
+
+.pvm_btn_container{
+    
+    float: left;
+    width: 68%;
+    
+}
+
+.pvm_btn_container img.pvm-custom-icon{
+    width: 16px;
+    height: 16px;
+}
+
+p.voting-closed-message{
+    font-family: inherit;
+    margin:0px 0px;
+    padding: 0px;
+    line-height: 24px;
+}
+
+.msg_container{
+    margin-top: 24px;
+}
+
+.btn_like, .btn_dislike{
+    width: auto; 
+    height: 48px;
+    line-height: 48px;
+    padding: 0 24px; 
+    float: left;  margin-top: 3px;
+    cursor: pointer; color: #333333; 
+    border:#f0f0f0 1px solid;
+    margin-right: 5px;
+    font-size: 20px;
+}
+
+.btn_like{text-align: center; color: #559900;}
+
+.btn_like:hover{
+
+    background-color: #f0f0f0;	border: #c6c6c6 1px solid; 
+}
+.btn_dislike{ color: #c9231a;}
+.btn_dislike:hover, .dislike-h{
+    background-color: #f0f0f0;	border: #c6c6c6 1px solid; 
+}
+
+.stat-cnt{ float: right; width: 25%;}
+.stat-bar{ width: 100%; height: 12px; margin: 12px 0; border: 1px solid #eeeeee;}
+.bg-green{ background-color: #559900;}
+.bg-red{background-color: #c9231a; }
+.total-vote-counter{ font-size: 14px; color: #333; text-align: right; }
+.stat-bar div{height: 12px; float: left;}
+
+.stat-bar-blank{ width: 100%; height: 12px; margin: 0;}
+
+.like-count-container, .dislike-count-container{
+	width: auto; height: 18px; 
+	float: right; 
+	font-size: 12px; line-height: 18px; color: #666;
+	padding-left: 15px;
+}
+
+a.pvm-filtered-post,
+a.pvm-filtered-post:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+/*------------------------------ Feedback Message Box  ---------------------------------*/
+
+.pvm_clearfix{
+    clear: both;
+}
+
+section.bwl-pro-voting-feedback-form-container{
+    display: none;
+}
+
+section.bwl-pro-voting-feedback-form-container h2{
+    
+    font-size: 16px;
+    
+}
+
+section.bwl-pro-voting-feedback-form-container .bwl_pro_form_error_message_box{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    width: 100%;
+    display: none;
+    padding: 5px;
+    margin: 0 0 12px 0;
+    
+}
+section.bwl-pro-voting-feedback-form-container .feedback_message_box{
+   -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    -moz-border-radius: 0px;
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+    font-size: 12px;
+}
+
+
+
+section.bwl-pro-voting-feedback-form-container form input.captcha, 
+section.bwl-pro-voting-feedback-form-container form input.sum {
+    display: inline;
+    text-align: center;
+    width: 40px;
+}
+
+section.bwl-pro-voting-feedback-form-container form span#spambot {
+    font-size: 11px;
+}
+
+/*------------------------------ Display Posts ---------------------------------*/
+
+ul.bpvm-posts{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.bpvm-posts li{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.bpvm-posts li a{
+    text-decoration: none;
+}
+
+/*------------------------------ PVM CUSTOM HEADER ---------------------------------*/
+
+.pvm-custom-header{
+    clear: both;
+    display: block;
+    font-weight: bold;
+    padding: 0 0 32px 0;
+    border-bottom: 1px solid #eeeeee;
+    font-size: 14px;
+}
+
+.pvm-custom-header div.post-position{
+    float: left;
+    width: 12%;
+    text-align: left;
+}
+.pvm-custom-header div.post-title{
+    float: left;
+    width: 50%;
+    text-align: left;
+}
+.pvm-custom-header div.post-votes{
+    float: left;
+    width: 37%;
+    text-align: right;
+}
+
+.pvm-custom-info{
+    clear: both;
+    display: block;
+}
+
+div.pvm-custom-info div.post-position{
+    float: left;
+    width: 11%;
+    text-align: left;
+    font-weight: bold;
+    font-size: 32px;
+    padding: 8px 0 0 12px;
+}
+div.pvm-custom-info div.post-title{
+    float: left;
+    width: 86%;
+    text-align: left;
+    position: relative;
+    padding: 24px 0 0 0 ;
+}
+
+div.pvm-custom-info div.post-title a span{
+    font-size: 15px;
+    display: table-cell;
+    vertical-align: middle;
+    font-weight: bold;
+    
+}
+
+div.pvm-custom-info div.post-title a img{
+    display: inline-block;
+    margin: 0 8px 0 0 ;
+}
+
+
+div.bpvm-dn{
+    display: none;
+}
+
+/***********************************************************************************************/
+/* RESPONSIVE STYLING */
+/***********************************************************************************************/
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+    .pvm-custom-header{
+        font-weight: normal;
+        font-size: 14px;
+    }
+
+    .pvm-custom-header div.post-position{
+    
+        width: 25%;
+    }
+    .pvm-custom-header div.post-title{
+        width: 55%;
+    }
+    .pvm-custom-header div.post-votes{
+      
+        width: 20%;
+    }
+ 
+
+    div.pvm-custom-info div.post-position{
+        float: left;
+        width: 22%;
+        text-align: left;
+        font-weight: bold;
+        font-size: 20px;
+        padding: 8px 0 0 12px;
+    }
+    div.pvm-custom-info div.post-title{
+        float: left;
+        width: 70%;
+        text-align: left;
+        position: relative;
+        padding: 14px 0 0 ;
+    }
+
+    div.pvm-custom-info div.post-title a span{
+        font-size: 14px;
+        display: table-cell;
+        vertical-align: middle;
+        font-weight: normal;
+    }
+
+    div.pvm-custom-info div.post-title a img{
+        display: inline-block;
+        margin: 0 8px 0 0 ;
+    }
+}

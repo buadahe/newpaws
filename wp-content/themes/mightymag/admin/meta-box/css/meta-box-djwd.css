@@ -1,0 +1,45 @@
+.sep {
+	border-bottom: 1px solid #eee;
+	padding-bottom: 20px;
+	margin-bottom: 20px!important;
+}
+.rwmb-slider-wrapper .rwmb-label {
+	margin-top: 8px
+}
+.rwmb-select-wrapper .rwmb-label {
+	margin-top: 4px;
+}
+.rwmb-slider {
+	margin-top: 10px
+}
+
+.rwmb-slider-value-label span,
+.average-value .rwmb-input input[type="text"] {
+	border: 0;
+	display: inline-block;
+	color: #278AB7;
+	background: white;
+	font-weight: bold;
+	width: 40px;
+	font-size: 16px;
+	text-align: center;
+	border-radius: 3px;
+	padding: 3px;
+	border: 1px solid #e6e6e6;
+}
+
+.average-value .rwmb-input input[type="text"] {
+	font-size: 26px;
+	width: 70px;
+}
+
+.average-value label {
+	padding-top: 10px;
+	display: inline-block;
+}
+.rwmb-radio-wrapper .rwmb-input label {
+	margin-right: 20px;
+}
+.vc-license-activation-notice {
+	display:none;
+}

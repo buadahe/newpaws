@@ -1,0 +1,25 @@
+/* 
+** This file overrides some styling from Visual Composer CSS file
+** to match MightyMag design and avoid conflicts.
+*/
+
+/* FlexSliders Conflicts */
+
+#content .wpb_gallery_slides ul.flex-direction-nav,
+.content .wpb_gallery_slides ul.flex-direction-nav,
+.wpb_gallery_slides ul.flex-direction-nav {
+	display: none;
+}
+
+#content .wpb_gallery_slides ul.slides, .content .wpb_gallery_slides ul.slides, .wpb_gallery_slides ul.slides {
+	background-color: transparent;
+}
+
+/* Buttons integration */
+
+.wpb_button {
+	border-bottom: 3px solid rgba(0,0,0,.3)!important;
+}
+.wpb_button:focus {
+	border-bottom-color: transparent!important;
+}

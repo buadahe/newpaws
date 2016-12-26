@@ -1,0 +1,137 @@
+/* Switchery CSS */
+
+.switchery {
+  background-color: #fff;
+  border: 1px solid #dfdfdf;
+  border-radius: 20px;
+  cursor: pointer;
+  display: inline-block;
+  height: 25px;
+  position: relative;
+  vertical-align: middle;
+  width: 45px;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+.switchery > small {
+  background: #fff;
+  border-radius: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  height: 25px;
+  position: absolute;
+  top: 0;
+  width: 25px;
+}
+
+
+/* Range Input */
+
+.range-wrap {
+	position: relative;
+	overflow: auto;
+}
+.range-wrap .of-input {
+	border: 0; 
+	color: #278AB7;
+	background: #f2f2f2;
+	font-weight: bold; 
+	float: right; 
+	margin-right: -55px; 
+	margin-top: -5px;
+	width: 40px; 
+	font-size: 14px;
+	text-align: center;
+}
+.range-wrap .suffix {
+	position: absolute;
+		left: 478px;
+	color: #666; 
+	font-weight: bold; 
+	font-style: italic;
+}
+
+@-moz-document url-prefix() {
+	.range-wrap .suffix {
+		top: 13px;
+		}
+}
+
+.sub .range-wrap .suffix {
+		left: 460px;
+}
+
+#optionsframework h3 {
+	background: rgb(39, 138, 183);
+	color: white;
+}
+/* OF Adjustments */
+
+
+.of-typography-size {
+
+}
+.sub {
+	margin-left: 35px;
+}
+.long input {
+	width: 98%!important;
+}
+.sub h4 {
+	color: #666;
+}
+.nav-tab-wrapper {
+	max-width: 780px
+}
+.nav-tab {
+	background: #e9e9e9;
+}
+h2.nav-tab-wrapper, h3.nav-tab-wrapper {
+	border-bottom: none;
+}
+.wrap h2 {
+	padding: 13px 0px 0px 0;
+}
+#optionsframework .section .explain {
+	font-size: 11px!important;
+}
+.of-typography-size {
+	display: none;
+}
+#wpbody-content .metabox-holder {
+	padding-top: 0;
+}
+.nav-tab-active, .nav-tab-active:hover {
+	background: #fff;
+}
+#sbg_table tr th {
+	background: #f1f1f1;
+}
+
+.admin-proscons .remove.button {
+	margin-left: 10px!important;
+}
+
+.section-range .explain {
+	float: none!important;
+	margin-top: 20px;
+	padding-top: 30px;
+}
+
+.metabox-holder h3 {
+    font-size: 14px!important;
+    padding: 8px 12px;
+    margin: 0;
+    line-height: 1.4;
+	margin-bottom: -15px;
+	text-transform: uppercase;
+}
+
+#optionsframework .section.sub .heading {
+	background: transparent;
+	border-left: 1px solid #f1f1f1;
+	margin-left: 0px!important;
+	padding-left: 10px;
+}
