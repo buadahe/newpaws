@@ -606,6 +606,10 @@ body{
 		display: block !important; 
 		margin-top: 20px;
 	}
+
+	.login-box{
+		right: 5px !important;
+	}
 }
 
 @media ( max-width: 767px ){
