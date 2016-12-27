@@ -5,12 +5,21 @@ $target = of_get_option('mgm_social_target');
 
 ?>
 
+<ul class="login-box">
+	<div class="login-text">
+		<center>
+			<a href="#" class="login-text-detail">LOGIN</a>
+			|
+			<a href="#" class="login-text-detail">REGISTER</a>
+		</center>
+	</div>
+</ul>
 
 <ul class="socials">
 	<?php foreach($socials as $key=>$val){
-if ( of_get_option('mgm_sm_'.$key) ) { 
+	if ( of_get_option('mgm_sm_'.$key) ) { 
 
-	?>
+	?>	
 	<li><a href="<?php echo of_get_option('mgm_sm_'.$key); ?>" class="btn btn-social-icon <?php echo 'btn-'.$key; ?>" title="<?php _e('Follow us on', 'mightymag') ?> <?php echo $val; ?>" target="_blank">
 		<span class="<?php echo 'fa fa-'.$key; ?>"></span>
 	</a></li>

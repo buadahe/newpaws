@@ -1,3 +1,26 @@
+.login-box
+{
+	position: absolute;
+	top: 0px;
+	right: 130px !important;
+	background-color: #4D4D4D;
+	color: #818181;
+	width: 145px;
+	height: 35px;
+	border-radius: 3px;
+}
+.login-text{
+	margin-top: 5px;
+}
+
+.login-text-detail{
+	color: #818181;
+}
+
+a.login-text-detail:hover{
+	color: #F79E02;
+}
+
 .cstm_btn_rescue{
 	text-align: center;
 	margin-bottom: 40px;
@@ -437,7 +460,11 @@ body{
     	-webkit-border-radius: 4px;
     	-moz-border-radius: 4px;
 	}
-
+	/*.socials li a.cs-login{
+		background: #333 !important;
+		color: #FFA200 !important;
+		width: 200px;
+	}*/
 	.socials li span:hover,
 	.btn-facebook:hover,
 	.btn-instagram:hover{
