@@ -642,5 +642,8 @@ body{
 
 	.box-featured-articles ul{ padding-left: 25px; }
 
+	.login-box{
+		right: 5px !important;
+	}
 	
 }
