@@ -120,5 +120,60 @@
 	<?php wp_footer(); ?>
 	
 	</div><!-- #mgm-super-container -->
+
+<!-- Modal Login -->
+<div id="login-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+				<h4 class="modal-title">Modal Header</h4>
+			</div>
+			<div class="modal-body">
+				<p>Some text in the modal.</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+<!-- Modal Register -->
+<div id="register-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content modal-content-custom">
+				<form>
+					<div class="form-group form-group-custom">
+						<label class="label-custom" for="email">Email</label>
+						<input type="text" class="form-control form-control-custom" id="email">
+					</div>
+					<div class="form-group form-group-custom">
+						<label class="label-custom" for="nama">Nama</label>
+						<input type="text" class="form-control form-control-custom" id="nama">
+					</div>
+					<div class="form-group form-group-custom">
+						<label class="label-custom" for="password">Password</label>
+						<input type="password" class="form-control form-control-custom" id="password">
+					</div>
+					<div class="radio radio-custom">
+						<label class="radio-label-custom">
+							<input class="input-radio-custom" type="radio" name="optradio">
+							<span class="radio-span-custom">Cat</span>
+						</label>
+						<label class="radio-label-custom">
+							<input class="input-radio-custom" type="radio" name="optradio">
+							<span class="radio-span-custom">Dog</span>
+						</label>
+					</div>
+				</form>
+		</div>
+	</div>
+</div>
 </body>
 </html>

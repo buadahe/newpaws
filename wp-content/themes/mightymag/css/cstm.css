@@ -1,3 +1,56 @@
+.modal-content-custom{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	margin-top: 15px;
+	background: rgba(0,0,0,0.8);
+	border: 3px solid yellow;
+	right: -25%;
+	top: 15px;
+	position: absolute;
+}
+
+.form-control-custom{
+	border-top: none;
+	border-right: none;
+	height:20px;
+	color:#f1f000;
+	border-left: none;
+	border-color: white;
+	background-color: rgba(0,0,0,0.2);
+}
+
+.radio-custom{
+	width: 50%;
+	margin: 0 auto;
+}
+
+.radio-label-custom{
+	display: inline-block !important;
+	font-weight: normal;
+	cursor: pointer;
+	text-align: center;
+	padding: 10px;
+	color: white;
+}
+
+.input-radio-custom{
+	display: block;
+	margin: 0 7px !important;
+	float:none !important;
+}
+
+.label-custom{
+	margin:0;
+}
+
+.form-group-custom{
+	width: 50%;
+	color:white;
+	margin: 20px auto 15px auto;
+	text-align: center;
+}
+
 .login-box
 {
 	position: absolute;

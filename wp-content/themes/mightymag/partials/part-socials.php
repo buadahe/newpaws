@@ -8,12 +8,14 @@ $target = of_get_option('mgm_social_target');
 <ul class="login-box">
 	<div class="login-text">
 		<center>
-			<a href="#" class="login-text-detail">LOGIN</a>
+			<a href="#" data-toggle="modal" data-target="#login-modal" class="login-text-detail">LOGIN</a>
 			|
-			<a href="#" class="login-text-detail">REGISTER</a>
+			<a href="#" data-toggle="modal" data-target="#register-modal" class="login-text-detail">REGISTER</a>
 		</center>
 	</div>
 </ul>
+
+
 
 <ul class="socials">
 	<?php foreach($socials as $key=>$val){
