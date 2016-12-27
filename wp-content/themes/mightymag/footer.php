@@ -121,27 +121,6 @@
 	
 	</div><!-- #mgm-super-container -->
 
-<!-- Modal Login -->
-<div id="login-modal" class="modal fade" role="dialog">
-	<div class="modal-dialog">
-
-		<!-- Modal content-->
-		<div class="modal-content">
-			<div class="modal-header">
-				<button type="button" class="close" data-dismiss="modal">&times;</button>
-				<h4 class="modal-title">Modal Header</h4>
-			</div>
-			<div class="modal-body">
-				<p>Some text in the modal.</p>
-			</div>
-			<div class="modal-footer">
-				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-			</div>
-		</div>
-
-	</div>
-</div>
-
 <!-- Modal Register -->
 <div id="register-modal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
@@ -170,6 +149,36 @@
 							<input class="input-radio-custom" type="radio" name="optradio">
 							<span class="radio-span-custom">Dog</span>
 						</label>
+					</div>
+					<center><input type="submit" class="btn btn-register" name="" value="Thank's"></center>
+				</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Login -->
+<div id="login-modal" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content modal-content-custom">
+				<form>
+					<div class="form-group form-group-custom">
+						<label class="label-custom" for="nama">Nama</label>
+						<input type="text" class="form-control form-control-custom" id="nama">
+					</div>
+					<div class="form-group form-group-custom">
+						<label class="label-custom" for="password">Password</label>
+						<input type="password" class="form-control form-control-custom" id="password">
+						<a href="#" class="forgot-password-login">Lupa Password</a>
+					</div>
+					<div class="form-group form-group-custom" style="margin-top: -10px;">
+						<img src="wp-content/themes/mightymag/images/circle-facebook_icon.png" width="50px" height="50px"><br>
+						<!-- <span class="fa fa-facebook-square login-facebook-logo"></span><br> -->
+						<a href="#" class="login-facebook-text">login with facebook</a>
+					</div>
+					<div class="form-group form-group-custom" style="margin-top: -5px;">
+						<input type="submit" class="btn btn-register" name="" value="Go!">
 					</div>
 				</form>
 		</div>
