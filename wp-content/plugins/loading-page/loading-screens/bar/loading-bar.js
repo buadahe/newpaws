@@ -8,8 +8,8 @@
         attr   : {},
         create : function(options){
             options.backgroundColor = options.backgroundColor || "#000000";
-            options.height          = options.height || 1;
-            options.foregroundColor = options.foregroundColor || "#FFFFFF";
+            options.height          = options.height || 8;
+            options.foregroundColor = options.foregroundColor || "rgb(131, 203, 14)";
             
             var css_o = {
                 width: "100%",
@@ -42,14 +42,37 @@
             
             this.attr['overlay'] = $("<div class='lp-screen'></div>").css(css_o).appendTo("body");
             
-            this.attr['bar'] = $("<div class='lp-screen-graphic'></div>").css({
-                height: options.height+"px",
-                marginTop: "-" + (options.height / 2) + "px",
-                backgroundColor: options.foregroundColor,
-                width: "0%",
-                position: "absolute",
+             this.attr['container-bar'] = $("<div class='lp-container-screen-graphic'></div>").css({
+                width: "360px",
+                 position: "absolute",
+                top: "50%",
+                padding: "2px",
+                left: "30%",
+                height: "12px",               
+                background: "white",
+                borderRadius: "5px",
                 top: "50%"
             }).appendTo(this.attr['overlay']);
+            
+             this.attr['bar'] = $("<div class='lp-screen-graphic'></div>").css({
+                height: options.height+"px",
+               // marginTop: "-" + (options.height / 2) + "px",
+                backgroundColor: "rgb(131, 203, 14)",
+                borderRadius:"5px",
+                width: "0%",
+                marginLeft:"2px",
+                position: "relative"
+                //top: "50%"
+            }).appendTo(this.attr['container-bar']);
+            
+//            this.attr['bar'] = $("<div class='lp-screen-graphic'></div>").css({
+//                height: options.height+"px",
+//                marginTop: "-" + (options.height / 2) + "px",
+//                backgroundColor: options.foregroundColor,
+//                width: "0%",
+//                position: "absolute",
+//                top: "50%"
+//            }).appendTo(this.attr['overlay']);
             
             if (options.text) {
                 this.attr['text'] = $("<div class='lp-screen-text'></div>").text("0%").css({
