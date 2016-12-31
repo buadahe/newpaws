@@ -78,8 +78,8 @@
                 this.attr['text'] = $("<div class='lp-screen-text'></div>").text("please wait ...").css({
                     height: "40px",
                     position: "absolute",
-                    fontSize: "2em",
-                    top: "45%",
+                    fontSize: "22px",
+                    top: "44%",
                     letterSpacing: "2px",
                     left: "0",
                     right: "0",
