@@ -5,6 +5,7 @@ $target = of_get_option('mgm_social_target');
 
 ?>
 
+<?php if(!is_user_logged_in()) {?>
 <ul class="login-box">
 	<div class="login-text">
 		<center>
@@ -14,8 +15,7 @@ $target = of_get_option('mgm_social_target');
 		</center>
 	</div>
 </ul>
-
-
+<? } ?>
 
 <ul class="socials">
 	<?php foreach($socials as $key=>$val){

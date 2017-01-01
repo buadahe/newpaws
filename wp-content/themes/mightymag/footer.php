@@ -162,15 +162,15 @@
 
 		<!-- Modal content-->
 		<div class="modal-content modal-content-custom">
-				<form>
+				<form name="loginform" id="loginform" action="<?php echo esc_url( site_url( 'wp-login.php', 'login_post' ) ); ?>" method="post">
 					<div class="form-group form-group-custom">
-						<label class="label-custom" for="nama">Nama</label>
-						<input type="text" class="form-control form-control-custom" id="nama">
+						<label class="label-custom" for="user_login">Nama</label>
+						<input class="form-control form-control-custom" type="text" name="log" id="user_login"<?php echo $aria_describedby_error; ?> value="<?php echo esc_attr( $user_login ); ?>">
 					</div>
 					<div class="form-group form-group-custom">
-						<label class="label-custom" for="password">Password</label>
-						<input type="password" class="form-control form-control-custom" id="password">
-						<a href="#" class="forgot-password-login">Lupa Password</a>
+						<label class="label-custom" for="user_pass">Password</label>
+						<input class="form-control form-control-custom" type="password" name="pwd" id="user_pass"<?php echo $aria_describedby_error; ?> value="">
+						<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="forgot-password-login">Lupa Password</a>
 					</div>
 					<div class="form-group form-group-custom" style="margin-top: -10px;">
 						<img src="wp-content/themes/mightymag/images/circle-facebook_icon.png" width="50px" height="50px"><br>
@@ -178,7 +178,16 @@
 						<a href="#" class="login-facebook-text">login with facebook</a>
 					</div>
 					<div class="form-group form-group-custom" style="margin-top: -5px;">
-						<input type="submit" class="btn btn-register" name="" value="Go!">
+						<input class="btn btn-register" type="submit" name="wp-submit" id="wp-submit" value="Go!">
+						<?php	if ( $interim_login ) { ?>
+								<input type="hidden" name="interim-login" value="1" />
+						<?php	} else { ?>
+								<input type="hidden" name="redirect_to" value="<?php echo esc_attr($redirect_to); ?>" />
+						<?php 	} ?>
+						<?php   if ( $customize_login ) : ?>
+								<input type="hidden" name="customize-login" value="1" />
+						<?php   endif; ?>
+								<input type="hidden" name="testcookie" value="1" />
 					</div>
 				</form>
 		</div>
