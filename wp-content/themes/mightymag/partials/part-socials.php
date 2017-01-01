@@ -5,7 +5,11 @@ $target = of_get_option('mgm_social_target');
 
 ?>
 
-<?php if(!is_user_logged_in()) {?>
+<?php
+$current_user = wp_get_current_user();
+if ( 0 == $current_user->ID ) { 
+    // Not logged in.
+?>
 <ul class="login-box">
 	<div class="login-text">
 		<center>
@@ -15,7 +19,24 @@ $target = of_get_option('mgm_social_target');
 		</center>
 	</div>
 </ul>
-<? } ?>
+<?php
+} else {
+    // Logged in.
+?>
+<div class="login-box">
+	<div class="login-text">
+		<center>
+			<a href="#" class="login-text-detail">Dropdown</a>
+			|
+			<a href="#" class="login-text-detail"><?php  echo $current_user->user_login ?></a>
+		</center>
+	</div>
+</div>
+<?php
+}
+?>
+
+
 
 <ul class="socials">
 	<?php foreach($socials as $key=>$val){
