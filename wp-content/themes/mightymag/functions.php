@@ -391,6 +391,8 @@ function mgm_scripts() {
 	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider.min.js', array( 'jquery' ), '2.2', true );
 	wp_enqueue_script( 'fitvids', get_template_directory_uri() .'/js/jquery.fitvids.min.js', array('jquery'), '1.1', true );
 	wp_enqueue_script( 'djwd-js', get_template_directory_uri() . '/js/djwd.js', array( 'jquery' ), $mgm_v, true );
+	wp_enqueue_script('jquery-311', get_template_directory_uri() . '/js/jquery-3.1.1.js', array( 'jquery' ), true );
+	wp_enqueue_script( 'cstm-js', get_template_directory_uri() . '/js/cstm.js', array( 'jquery' ), true );
 	
 	//Deregister Uneeded scripts
 	wp_deregister_script('prettyphoto');

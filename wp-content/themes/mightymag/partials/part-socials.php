@@ -24,18 +24,48 @@ if ( 0 == $current_user->ID ) {
     // Logged in.
 ?>
 <div class="login-box">
-	<div class="login-text">
+	<div class="login-text dropdown">
 		<center>
-			<a href="#" class="login-text-detail">Dropdown</a>
-			|
+			<div id="vdropdown" class="dropdownmenucustom login-text-detail">v</div>
+		</center>
+		<ul class="subdropmenu dropdownmenucustom">
+			<li class="subdropmenu-item">
+				<i class="subdropmenu-icon fa fa-user"></i>
+				<a class="subdropmenu-link">
+					Profil Saya
+				</a>
+			</li>
+			<li class="subdropmenu-item">
+				<i class="subdropmenu-icon fa fa-dashboard"></i>
+				<a class="subdropmenu-link">
+					Dashboard
+				</a>
+			</li>
+			<li class="subdropmenu-item">
+				<i class="subdropmenu-icon fa fa-circle-o"></i>
+				<a class="subdropmenu-link">
+					Gallery
+				</a>
+			</li>
+			<li class="subdropmenu-item">
+				<i class="subdropmenu-icon fa fa-sign-out"></i>
+				<a class="subdropmenu-link">
+					Logout
+				</a>
+			</li>
+		</ul>
+	</div>
+	<div class="login-text profile">
+		<center>
 			<a href="#" class="login-text-detail"><?php  echo $current_user->user_login ?></a>
 		</center>
 	</div>
 </div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+
 <?php
 }
 ?>
-
 
 
 <ul class="socials">

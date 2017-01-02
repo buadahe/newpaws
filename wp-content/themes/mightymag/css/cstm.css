@@ -732,3 +732,47 @@ body{
 	}
 	
 }
+
+.login-text.dropdown {
+	width: 20%;
+	float: left;
+	border-right: 1px solid white;
+}
+
+.login-text.profile {
+	width:80%;
+	float:left;
+}
+
+ul.subdropmenu{
+	display: none;
+	position: absolute;
+	top: 125%;
+	right:0px !important;
+	width: 110px;
+	background: white;
+	z-index: 1000;
+	color:black;
+}
+
+li.subdropmenu-item{
+	border-bottom: 1px solid #4d4d4d;
+	width: 100%;
+	margin-left: 0 !important;
+	padding: 7px;
+	background:white !important;
+}
+
+.subdropmenu-icon{
+	margin:0 5px;
+}
+
+a.subdropmenu-link:hover {
+	color:#ffa200;
+	cursor:pointer;
+}
+
+#vdropdown:hover{
+	color:#ffa200;
+	cursor:pointer;
+}
