@@ -61,7 +61,7 @@ function mgm_setup() {
 	 */
 	load_theme_textdomain( 'mightymag', get_template_directory() . '/languages' );
 	load_theme_textdomain( 'mightymag-admin', get_template_directory() . '/languages/admin/' );
-	//load_theme_textdomain( 'login-with-ajax', get_template_directory() . '/inc/login-with-ajax/langs/' );
+	//load_theme_textdomain( 'login-with-ajax', get_template_directory() . '/inc/register-with-ajax/langs/' );
 
 	/**
 	 * Add default posts and comments RSS feed links to head
@@ -1383,4 +1383,63 @@ function wpd_archive_query( $query ){
     }
 }
 add_action( 'pre_get_posts', 'wpd_archive_query' );
+
+/*
+==========================================================
+Custom Register
+==========================================================
+*/
+
+function ajax_register_init(){
+
+	wp_register_script('ajax-register-script', get_template_directory_uri() . '/js/ajax-register-script.js', array('jquery') );
+	wp_enqueue_script('ajax-register-script');
+
+	wp_localize_script( 'ajax-register-script', 'ajax_login_object', array(
+			'ajaxurl' => admin_url( 'admin-ajax.php' ),
+			'redirecturl' => home_url(),
+			'loadingmessage' => __('Sending user info, please wait...')
+	));
+
+	// Enable the user with no privileges to run ajax_register() in AJAX
+	add_action( 'wp_ajax_nopriv_ajaxregister', 'ajax_register' );
+}
+
+// Execute the action only if the user isn't logged in
+if (!is_user_logged_in()) {
+	add_action('init', 'ajax_register_init');
+}
+
+function ajax_register(){
+
+	// First check the nonce, if it fails the function will break
+	check_ajax_referer( 'ajax-login-nonce', 'security' );
+
+	// Nonce is checked, get the POST data and sign user on
+	$info = array();
+	$info['user_login'] = $_POST['name'];
+	$info['user_password'] = $_POST['password'];
+	$info['user_category'] = $_POST['category'];
+
+	$user_signup = wp_insert_user($info);
+	if ( is_wp_error($user_signup) ){
+		echo json_encode(array('loggedin'=>false, 'message'=>__('Register Failed!')));
+	} else {
+		echo json_encode(array('loggedin'=>true, 'message'=>__('Register Successful!')));
+	}
+
+	die();
+}
+
+
+add_action('after_setup_theme', 'remove_admin_bar');
+
+function remove_admin_bar() {
+	if (!current_user_can('administrator') && !is_admin()) {
+		show_admin_bar(false);
+	}
+	if (!is_user_logged_in()) {
+		add_filter( 'show_admin_bar', '__return_false' , 1000 );
+	}
+}
 ?>

@@ -776,3 +776,23 @@ a.subdropmenu-link:hover {
 	color:#ffa200;
 	cursor:pointer;
 }
+
+.wdi_load_more_wrap {
+	border-bottom-right-radius: 0px !important;
+	border-bottom-left-radius: 0px !important;
+	height: 79px !important;
+	width: 148px !important;
+}
+
+a.wdi_spider_popup_close {
+	top: 2px !important;
+	right:2px !important;
+	background-color:transparent !important;
+	color:#000000 !important;
+	border: 2px none #000000 !important;
+
+}
+
+.wdi_embed_frame img {
+	border: 5px solid white !important;
+}

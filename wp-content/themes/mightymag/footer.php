@@ -127,14 +127,15 @@
 
 		<!-- Modal content-->
 		<div class="modal-content modal-content-custom">
-				<form>
+				<form id="registerss" action="register_custom" method="post">
+					<p class="status"></p>
 					<div class="form-group form-group-custom">
 						<label class="label-custom" for="email">Email</label>
-						<input type="text" class="form-control form-control-custom" id="email">
+						<input name="email" type="text" class="form-control form-control-custom" id="email">
 					</div>
 					<div class="form-group form-group-custom">
-						<label class="label-custom" for="nama">Nama</label>
-						<input type="text" class="form-control form-control-custom" id="nama">
+						<label class="label-custom" for="name">Nama</label>
+						<input name="name" type="text" class="form-control form-control-custom" id="name">
 					</div>
 					<div class="form-group form-group-custom">
 						<label class="label-custom" for="password">Password</label>
@@ -142,15 +143,16 @@
 					</div>
 					<div class="radio radio-custom">
 						<label class="radio-label-custom">
-							<input class="input-radio-custom" type="radio" name="optradio">
+							<input class="input-radio-custom" type="radio" name="category" value="cat" id="category">
 							<span class="radio-span-custom">Cat</span>
 						</label>
 						<label class="radio-label-custom">
-							<input class="input-radio-custom" type="radio" name="optradio">
+							<input class="input-radio-custom" type="radio" name="category" value="dog" id="category">
 							<span class="radio-span-custom">Dog</span>
 						</label>
 					</div>
-					<center><input type="submit" class="btn btn-register" name="" value="Thank's"></center>
+					<center><input type="submit" class="btn btn-register" name="submit" value="Thank's"></center>
+					<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
 				</form>
 		</div>
 	</div>

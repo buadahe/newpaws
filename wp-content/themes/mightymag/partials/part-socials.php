@@ -49,9 +49,7 @@ if ( 0 == $current_user->ID ) {
 			</li>
 			<li class="subdropmenu-item">
 				<i class="subdropmenu-icon fa fa-sign-out"></i>
-				<a class="subdropmenu-link">
-					Logout
-				</a>
+				<a class="subdropmenu-link" href="<?php echo wp_logout_url( home_url() ); ?>">Logout</a>
 			</li>
 		</ul>
 	</div>
