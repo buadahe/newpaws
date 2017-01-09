@@ -1442,4 +1442,9 @@ function remove_admin_bar() {
 		add_filter( 'show_admin_bar', '__return_false' , 1000 );
 	}
 }
+
+add_filter( 'wpmu_signup_blog_notification', '__return_false' );
+
+add_filter( 'bp_registration_needs_activation', '__return_false' );
+
 ?>

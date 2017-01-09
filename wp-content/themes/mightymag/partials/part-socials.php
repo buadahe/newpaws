@@ -37,7 +37,13 @@ if ( 0 == $current_user->ID ) {
 			</li>
 			<li class="subdropmenu-item">
 				<i class="subdropmenu-icon fa fa-dashboard"></i>
-				<a class="subdropmenu-link">
+				<a class="subdropmenu-link"
+				<?php 
+					if ($current_user->user_login == 'admin') {
+						echo "href='".admin_url()."'";
+					}
+				?>
+				>
 					Dashboard
 				</a>
 			</li>
