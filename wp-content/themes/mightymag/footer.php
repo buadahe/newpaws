@@ -130,18 +130,27 @@
 				<form id="registerss" action="register_custom" method="post">
 					<p class="status"></p>
 					<div class="form-group form-group-custom">
-						<label class="label-custom" for="email">Email</label>
-						<input name="email" type="text" class="form-control form-control-custom" id="email">
+						<label class="label-custom" for="signup_email"><?php _e( 'Email', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
+						<?php do_action( 'bp_signup_email_errors' ); ?>
+						<input type="text" name="signup_email" id="signup_email" value="<?php bp_signup_email_value(); ?>" class="form-control form-control-custom"/>
 					</div>
 					<div class="form-group form-group-custom">
-						<label class="label-custom" for="name">Nama</label>
-						<input name="name" type="text" class="form-control form-control-custom" id="name">
+						<label class="label-custom" for="signup_username"><?php _e( 'Username', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
+						<?php do_action( 'bp_signup_username_errors' ); ?>
+						<input type="text" name="signup_username" id="signup_username" value="<?php bp_signup_username_value(); ?>" class="form-control form-control-custom" />
 					</div>
 					<div class="form-group form-group-custom">
-						<label class="label-custom" for="password">Password</label>
-						<input type="password" class="form-control form-control-custom" id="password">
+						<label class="label-custom" for="signup_password"><?php _e( 'Password', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
+						<?php do_action( 'bp_signup_password_errors' ); ?>
+						<input type="password" name="signup_password" id="signup_password" value="" class="form-control form-control-custom" />
 					</div>
-					<div class="radio radio-custom">
+					<div class="form-group form-group-custom">
+						<label class="label-custom" for="signup_password_confirm"><?php _e( 'Confirm Password', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
+						<?php do_action( 'bp_signup_password_confirm_errors' ); ?>
+						<input type="password" name="signup_password_confirm" id="signup_password_confirm" value="" class="form-control form-control-custom" />
+					</div>	
+
+					<!-- <div class="radio radio-custom">
 						<label class="radio-label-custom">
 							<input class="input-radio-custom" type="radio" name="category" value="cat" id="category">
 							<span class="radio-span-custom">Cat</span>
@@ -151,8 +160,13 @@
 							<span class="radio-span-custom">Dog</span>
 						</label>
 					</div>
-					<center><input type="submit" class="btn btn-register" name="submit" value="Thank's"></center>
-					<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+					
+					<?php //wp_nonce_field( 'ajax-login-nonce', 'security' ); ?> -->
+					<center><input type="submit" name="signup_submit" class="btn btn-register" id="signup_submit" value="<?php _e( "Thank's", "buddypress" ); ?>" /></center>
+
+					<?php do_action( 'bp_after_registration_submit_buttons' ); ?>
+			
+					<?php wp_nonce_field( 'bp_new_signup' ); ?>
 				</form>
 		</div>
 	</div>

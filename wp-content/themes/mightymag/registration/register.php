@@ -82,6 +82,7 @@
 									<?php if ( bp_is_active( 'xprofile' ) ) : if ( bp_has_profile( 'profile_group_id=1' ) ) : while ( bp_profile_groups() ) : bp_the_profile_group(); ?>
 			
 									<?php while ( bp_profile_fields() ) : bp_the_profile_field(); ?>
+									<?php if ( 1 == bp_get_the_profile_field_id() ) continue; ?>
 			
 										<div class="editfield">
 			
