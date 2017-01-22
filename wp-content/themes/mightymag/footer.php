@@ -209,5 +209,63 @@
 		</div>
 	</div>
 </div>
+
+<!-- Modal Register -->
+<div id="my-profile" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content modal-content-custom-profile">
+			<form id="registerss" action="register_custom" method="post">
+				<p class="status"></p>
+				<?php $current_user = wp_get_current_user();
+				if ( 0 !== $current_user->ID ) {
+				?>
+						<div class="avatar-custom-profile">
+							<?php bp_activity_avatar( 'user_id=' . $current_user->ID ); ?>
+						</div>
+				<?php } ?>
+				<div class="form-group form-group-custom">
+
+					<input name="email" placeholder="Nama" type="text" class="form-control form-control-custom-profile" id="email">
+				</div>
+				<div class="form-group form-group-custom">
+
+					<input name="name" placeholder="Jenisnya" type="text" class="form-control form-control-custom-profile" id="name">
+				</div>
+				<div class="form-group form-group-custom">
+
+					<input name="name" placeholder="Date Of Born" type="text" class="form-control form-control-custom-profile" id="name">
+				</div>
+				<div class="form-group form-group-custom">
+
+					<input name="name" placeholder="Jenis Kelamin" type="text" class="form-control form-control-custom-profile" id="name">
+				</div>
+				<div class="form-group form-group-custom">
+
+					<input name="name" placeholder="Warna" type="text" class="form-control form-control-custom-profile" id="name">
+				</div>
+				<div class="form-group form-group-custom">
+
+					<input name="name" placeholder="Berat" type="text" class="form-control form-control-custom-profile" id="name">
+				</div>
+				<label class="text-field-custom" for="category">Stambum</label>
+				<div class="radio radio-custom">
+					<label class="radio-label-custom-profile">
+						<input class="input-radio-custom" type="radio" name="category" value="Yes" id="category">
+						<span class="radio-span-custom">Yes</span>
+					</label>
+					<label class="radio-label-custom-profile">
+						<input class="input-radio-custom" type="radio" name="category" value="No" id="category">
+						<span class="radio-span-custom">No</span>
+					</label>
+				</div>
+				<center style="margin-top:5px"><input type="submit" class="btn btn-register" name="submit" value="Submit"></center>
+				<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+			</form>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>

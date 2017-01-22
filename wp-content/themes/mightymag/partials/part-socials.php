@@ -31,7 +31,7 @@ if ( 0 == $current_user->ID ) {
 		<ul class="subdropmenu dropdownmenucustom">
 			<li class="subdropmenu-item">
 				<i class="subdropmenu-icon fa fa-user"></i>
-				<a class="subdropmenu-link">
+				<a data-toggle="modal" data-target="#my-profile" class="subdropmenu-link">
 					Profil Saya
 				</a>
 			</li>
@@ -49,7 +49,7 @@ if ( 0 == $current_user->ID ) {
 			</li>
 			<li class="subdropmenu-item">
 				<i class="subdropmenu-icon fa fa-circle-o"></i>
-				<a class="subdropmenu-link">
+				<a href="<?=site_url('index.php/gallery')?>" class="subdropmenu-link">
 					Gallery
 				</a>
 			</li>
