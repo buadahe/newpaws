@@ -127,7 +127,7 @@
 
 		<!-- Modal content-->
 		<div class="modal-content modal-content-custom">
-				<form id="registerss" action="register_custom" method="post">
+				<form id="signup_form" method="post" action="register">
 					<p class="status"></p>
 					<div class="form-group form-group-custom">
 						<label class="label-custom" for="signup_email"><?php _e( 'Email', 'buddypress' ); ?> <?php _e( '(required)', 'buddypress' ); ?></label>
@@ -189,7 +189,7 @@
 						<a href="<?php echo esc_url( wp_lostpassword_url() ); ?>" class="forgot-password-login">Lupa Password</a>
 					</div>
 					<div class="form-group form-group-custom" style="margin-top: -10px;">
-						<img src="wp-content/themes/mightymag/images/circle-facebook_icon.png" width="50px" height="50px"><br>
+						<img src="https://s23.postimg.org/mtv0iiwhn/circle_facebook_icon.png" width="50px" height="50px"><br>
 						<!-- <span class="fa fa-facebook-square login-facebook-logo"></span><br> -->
 						<a href="#" class="login-facebook-text">login with facebook</a>
 					</div>
@@ -210,13 +210,13 @@
 	</div>
 </div>
 
-<!-- Modal Register -->
+<!-- Modal Profile -->
 <div id="my-profile" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 
 		<!-- Modal content-->
 		<div class="modal-content modal-content-custom-profile">
-			<form id="registerss" action="register_custom" method="post">
+			<form id="registerss" action="register" method="post">
 				<p class="status"></p>
 				<?php $current_user = wp_get_current_user();
 				if ( 0 !== $current_user->ID ) {
@@ -227,7 +227,7 @@
 				<?php } ?>
 				<div class="form-group form-group-custom">
 
-					<input name="email" placeholder="Nama" type="text" class="form-control form-control-custom-profile" id="email">
+					<input name="email" placeholder="<?php  echo $current_user->user_login ?>" type="text" class="form-control form-control-custom-profile" id="email" disabled>
 				</div>
 				<div class="form-group form-group-custom">
 
@@ -262,6 +262,48 @@
 				</div>
 				<center style="margin-top:5px"><input type="submit" class="btn btn-register" name="submit" value="Submit"></center>
 				<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+			</form>
+		</div>
+	</div>
+</div>
+
+<!-- Modal Dashboard -->
+<div id="my-dashboard" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+
+		<!-- Modal content-->
+		<div class="modal-content modal-content-custom-dashboard">
+			<form id="dashboard-form" action="" method="post">
+				<p class="status"></p>
+				<?php $current_user = wp_get_current_user();
+				if ( 0 !== $current_user->ID ) {
+				?>
+					<div class="avatar-custom-profile">
+						<?php bp_activity_avatar( 'user_id=' . $current_user->ID ); ?>
+						<p style="color: #ffa200;">edit</p>
+					</div>
+				<?php } ?>
+				<div class="form-group form-group-custom">
+					<h4 style="color: white !important;"><?php  echo $current_user->user_login ?></h4>
+				</div>
+
+				<div class="form-group form-group-upload">
+					<div class="image-upload-dashboard">
+						<label for="file-input-dashboard">
+				        	<img src="https://s24.postimg.org/vgckfdvtx/upload_file_large_icon.jpg"/>
+					    </label>
+
+					    <input id="file-input-dashboard" type="file"/>
+					</div>
+				</div>
+
+				<div class="form-group form-group-upload-caption">
+					<p class="caption-text-header">Caption Teks</p>
+					<input type="text" name="" class="form-control form-control-caption-text">
+					<input type="text" name="" class="form-control form-control-caption-text">
+				</div>	
+
+				<center><input class="btn btn-upload-dashboard" type="submit" name="wp-submit" id="wp-submit" value="post"></center>
 			</form>
 		</div>
 	</div>

@@ -42,6 +42,11 @@ if ( 0 == $current_user->ID ) {
 					if ($current_user->user_login == 'admin') {
 						echo "href='".admin_url()."'";
 					}
+					else{
+				?>
+						data-toggle="modal" data-target="#my-dashboard"
+				<?php
+					}
 				?>
 				>
 					Dashboard
