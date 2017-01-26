@@ -1391,6 +1391,7 @@ Custom Register
 */
 
 include 'custom/user-register.php';
+include 'custom/profile.php';
 
 
 /**

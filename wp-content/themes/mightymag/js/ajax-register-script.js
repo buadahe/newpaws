@@ -8,7 +8,6 @@ jQuery(document).ready(function($) {
         
     });
 
-
     // Show the login dialog box on click
     //$('a#show_login').on('click', function(e){
     //    $('body').prepend('<div class="login_overlay"></div>');
@@ -73,6 +72,36 @@ jQuery(document).ready(function($) {
                     // console.log('gagal');
                     alert(data.message);
                 }
+            }
+        });
+        e.preventDefault();
+    });
+
+    // Perform AJAX profile on form submit
+    jQuery('#profile_form').on('submit', function(e){
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: ajax_login_object.ajaxurl,
+            data: {
+                'action'            : 'ajaxprofile', //calls wp_ajax_nopriv_ajaxlogin
+                'jenis'             : jQuery('#profile_form #jenis').val(),
+                'date-of-born'      : jQuery('#profile_form #date-of-born').val(),
+                'jenis_kelamin'     : jQuery('#profile_form #jenis_kelamin').val(),
+                'warna'             : jQuery('#profile_form #warna').val(),
+                'berat'             : jQuery('#profile_form #berat').val(),
+                'stambum'           : jQuery('#profile_form input[name=stambum]:checked').val(),
+                'security'          : jQuery('#profile_form #security').val() 
+            },
+            success: function(data){
+                console.log(data);
+                // if (data.loggedin == true){
+                //     // console.log('sukses');
+                //     window.location.href = ajax_login_object.redirecturl;
+                // }else{
+                //     // console.log('gagal');
+                //     alert(data.message);
+                // }
             }
         });
         e.preventDefault();

@@ -214,52 +214,55 @@
 <!-- Modal Profile -->
 <div id="my-profile" class="modal fade" role="dialog">
 	<div class="modal-dialog">
-
-		<!-- Modal content-->
 		<div class="modal-content modal-content-custom-profile">
-			<form id="registerss" action="register" method="post">
-				<p class="status"></p>
+			<form id="profile_form" action="register" method="post">
 				<?php $current_user = wp_get_current_user();
 				if ( 0 !== $current_user->ID ) {
 				?>
-						<div class="avatar-custom-profile">
-							<?php bp_activity_avatar( 'user_id=' . $current_user->ID ); ?>
-						</div>
+				<div class="avatar-custom-profile">
+					<?php bp_activity_avatar( 'user_id=' . $current_user->ID ); ?>
+				</div>
 				<?php } ?>
 				<div class="form-group form-group-custom">
-
-					<input name="email" placeholder="<?php  echo $current_user->user_login ?>" type="text" class="form-control form-control-custom-profile" id="email" disabled>
+					<input name="username" placeholder="<?php echo $current_user->user_login ?>" type="text" class="form-control form-control-custom-profile" id="username" readonly>
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Jenisnya" type="text" class="form-control form-control-custom-profile" id="name">
+					<input name="jenis" placeholder="Jenisnya" type="text" class="form-control form-control-custom-profile" id="jenis" value="<?php echo get_user_meta( $current_user->ID, 'profile_jenis', true );  ?>" required>
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Date Of Born" type="text" class="form-control form-control-custom-profile" id="name">
+					<input name="date-of-born" placeholder="Date Of Born" type="date" class="form-control form-control-custom-profile" id="date-of-born" value="<?php echo get_user_meta( $current_user->ID, 'profile_date-of-born', true );  ?>" required>
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Jenis Kelamin" type="text" class="form-control form-control-custom-profile" id="name">
+					<label for="jenis_kelamin">Jenis Kelamin</label>
+					<select name="jenis_kelamin" class="form-control form-control-custom-profile" id="jenis_kelamin" required style="height: 30px; text-align: center;">
+						<option value="L" <?php echo (get_user_meta( $current_user->ID, 'profile_jenis_kelamin', true ) == 'L') ? 'selected' : '' ; ?>>L</option>
+						<option value="P" <?php echo (get_user_meta( $current_user->ID, 'profile_jenis_kelamin', true ) == 'P') ? 'selected' : '' ; ?>>P</option>
+					</select>
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Warna" type="text" class="form-control form-control-custom-profile" id="name">
+					<input name="warna" placeholder="Warna" type="text" class="form-control form-control-custom-profile" value="<?php echo get_user_meta( $current_user->ID, 'profile_warna', true );  ?>" id="warna">
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Berat" type="text" class="form-control form-control-custom-profile" id="name">
+					<input name="berat" placeholder="Berat" type="text" class="form-control form-control-custom-profile" value="<?php echo get_user_meta( $current_user->ID, 'profile_berat', true );  ?>" id="berat">
 				</div>
-				<label class="text-field-custom" for="category">Stambum</label>
+				<div>
+				<label class="text-field-custom" for="stambum">Stambum</label>
 				<div class="radio radio-custom">
 					<label class="radio-label-custom-profile">
-						<input class="input-radio-custom" type="radio" name="category" value="Yes" id="category">
+						<input class="input-radio-custom" type="radio" name="stambum" value="Yes" id="stambum_yes" required="" <?php echo (get_user_meta( $current_user->ID, 'profile_stambum', true ) == 'Yes') ? 'checked' : '' ; ?>>
 						<span class="radio-span-custom">Yes</span>
 					</label>
 					<label class="radio-label-custom-profile">
-						<input class="input-radio-custom" type="radio" name="category" value="No" id="category">
+						<input class="input-radio-custom" type="radio" name="stambum" value="No" id="stambum_no" required="" <?php echo (get_user_meta( $current_user->ID, 'profile_stambum', true ) == 'No') ? 'checked' : '' ; ?>>
 						<span class="radio-span-custom">No</span>
 					</label>
+					<?php 
+						if (get_user_meta($user_id, 'profile_stambum')) {
+							echo "adda";
+							echo (get_user_meta( $current_user->ID, 'profile_stambum', true ));							
+						}
+					 ?>
+				</div>
 				</div>
 				<center style="margin-top:5px"><input type="submit" class="btn btn-register" name="submit" value="Submit"></center>
 				<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>

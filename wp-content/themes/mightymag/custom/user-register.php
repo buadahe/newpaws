@@ -29,7 +29,7 @@ function ajax_register()
     $info['user_nicename']  = $_POST['signup_username'];
     $info['user_email']     = $_POST['signup_email'];
     $info['display_name'] 	= $_POST['signup_username'];
-    // $info['user_category'] 		   = $_POST['signup_category'];
+    $info['user_category'] 	= $_POST['signup_category'];
 
     // First check the nonce, if it fails the function will be break
 	check_ajax_referer('ajax-login-nonce', 'security');
@@ -54,6 +54,13 @@ function ajax_register()
         echo json_encode(array('loggedin' => false, 'message' => __('Register Failed!')));
     } else {
         do_action('user_register', $user_signup);
+        add_user_meta( $user_signup, 'user_category', $info['user_category']);
+        $data = array(
+        	'user_login' 	=> $info['user_login'],
+        	'user_password' => $info['user_pass'],
+        	'remember' 		=> TRUE,
+        );
+        wp_signon( $data, false );
         echo json_encode(array('loggedin' => true, 'message' => __('Register Successful!')));
     }
 
