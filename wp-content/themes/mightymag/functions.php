@@ -1390,48 +1390,12 @@ Custom Register
 ==========================================================
 */
 
-function ajax_register_init(){
-
-	wp_register_script('ajax-register-script', get_template_directory_uri() . '/js/ajax-register-script.js', array('jquery') );
-	wp_enqueue_script('ajax-register-script');
-
-	wp_localize_script( 'ajax-register-script', 'ajax_login_object', array(
-			'ajaxurl' => admin_url( 'admin-ajax.php' ),
-			'redirecturl' => home_url(),
-			'loadingmessage' => __('Sending user info, please wait...')
-	));
-
-	// Enable the user with no privileges to run ajax_register() in AJAX
-	add_action( 'wp_ajax_nopriv_ajaxregister', 'ajax_register' );
-}
-
-// Execute the action only if the user isn't logged in
-if (!is_user_logged_in()) {
-	add_action('init', 'ajax_register_init');
-}
-
-function ajax_register(){
-
-	// First check the nonce, if it fails the function will break
-	check_ajax_referer( 'ajax-login-nonce', 'security' );
-
-	// Nonce is checked, get the POST data and sign user on
-	$info = array();
-	$info['user_login'] = $_POST['name'];
-	$info['user_password'] = $_POST['password'];
-	$info['user_category'] = $_POST['category'];
-
-	$user_signup = wp_insert_user($info);
-	if ( is_wp_error($user_signup) ){
-		echo json_encode(array('loggedin'=>false, 'message'=>__('Register Failed!')));
-	} else {
-		echo json_encode(array('loggedin'=>true, 'message'=>__('Register Successful!')));
-	}
-
-	die();
-}
+include 'custom/user-register.php';
 
 
+/**
+ * Remove admin bar for non administrator (user)
+ */
 add_action('after_setup_theme', 'remove_admin_bar');
 
 function remove_admin_bar() {
@@ -1444,7 +1408,7 @@ function remove_admin_bar() {
 }
 
 add_filter( 'wpmu_signup_blog_notification', '__return_false' );
-
 add_filter( 'bp_registration_needs_activation', '__return_false' );
+
 
 ?>
