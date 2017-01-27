@@ -274,10 +274,9 @@
 <!-- Modal Dashboard -->
 <div id="my-dashboard" class="modal fade" role="dialog">
 	<div class="modal-dialog">
-
 		<!-- Modal content-->
 		<div class="modal-content modal-content-custom-dashboard">
-			<form id="dashboard-form" action="" method="post">
+			<form id="dashboard_form" action="" method="post">
 				<p class="status"></p>
 				<?php $current_user = wp_get_current_user();
 				if ( 0 !== $current_user->ID ) {
@@ -297,14 +296,13 @@
 				        	<img src="https://s24.postimg.org/vgckfdvtx/upload_file_large_icon.jpg"/>
 					    </label>
 
-					    <input id="file-input-dashboard" type="file"/>
+					    <input id="file-input-dashboard" type="file" name="foto" />
 					</div>
 				</div>
 
 				<div class="form-group form-group-upload-caption">
 					<p class="caption-text-header">Caption Teks</p>
-					<input type="text" name="" class="form-control form-control-caption-text">
-					<input type="text" name="" class="form-control form-control-caption-text">
+					<input type="text" name="caption" class="form-control form-control-caption-text" id="caption">
 				</div>	
 
 				<center><input class="btn btn-upload-dashboard" type="submit" name="wp-submit" id="wp-submit" value="post"></center>

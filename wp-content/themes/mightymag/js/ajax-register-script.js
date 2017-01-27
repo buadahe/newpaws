@@ -94,14 +94,36 @@ jQuery(document).ready(function($) {
                 'security'          : jQuery('#profile_form #security').val() 
             },
             success: function(data){
+                alert('Profile updated.');
+            }
+        });
+        e.preventDefault();
+    });
+
+    jQuery('#dashboard_form').on('submit', function(e){
+        var formData = new FormData();
+        formData.append('action', 'ajaxdashboard');
+        formData.append("foto", $('#dashboard_form #file-input-dashboard')[0].files[0]);
+        formData.append('caption', jQuery('#dashboard_form #caption').val());
+        // formData.append('caption', jQuery('#dashboard_form #security').val());
+
+        $.ajax({
+            type: 'POST',
+            url: ajax_login_object.ajaxurl,
+            // dataType: 'json',
+            cache: false,
+            contentType: false,
+            processData: false,
+            data: formData,
+            success: function(data){
                 console.log(data);
-                // if (data.loggedin == true){
-                //     // console.log('sukses');
-                //     window.location.href = ajax_login_object.redirecturl;
-                // }else{
-                //     // console.log('gagal');
-                //     alert(data.message);
-                // }
+                if (data.status == 'success'){
+                    alert('sukses');
+                    // alert(data.message);
+                }else{
+                    alert('error');
+                    // alert('Refresh and add image again.');
+                }
             }
         });
         e.preventDefault();

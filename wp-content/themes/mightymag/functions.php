@@ -1390,9 +1390,7 @@ Custom Register
 ==========================================================
 */
 
-include 'custom/user-register.php';
-include 'custom/profile.php';
-
+include 'custom/ajax-function.php';
 
 /**
  * Remove admin bar for non administrator (user)
