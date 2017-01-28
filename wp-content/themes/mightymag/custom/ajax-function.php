@@ -145,6 +145,6 @@ function ajax_dashboard()
     );
     media_handle_upload( 'foto', 0, $post_data);
 
-    echo json_encode(array('status' => 'success', 'message' => __('Profile updated!')));
+    echo json_encode(array('status' => 'success', 'message' => __('Image uploaded!')));
     die();
 }
