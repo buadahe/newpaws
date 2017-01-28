@@ -127,48 +127,49 @@
 
 		<!-- Modal content-->
 		<div class="modal-content modal-content-custom">
-				<form id="signup_form" method="post" action="register">
-					<p class="status"></p>
-					<div class="form-group form-group-custom">
-						<label class="label-custom" for="signup_email">
-							<?php _e( 'Email', 'buddypress' ); ?>
-						</label>
-						<?php do_action( 'bp_signup_email_errors' ); ?>
-						<input type="email" name="signup_email" id="signup_email" value="<?php bp_signup_email_value(); ?>" class="form-control form-control-custom" required/>
-					</div>
-					<div class="form-group form-group-custom">
-						<label class="label-custom" for="signup_username">
-							<?php _e( 'Username', 'buddypress' ); ?> 
-						</label>
-						<?php do_action( 'bp_signup_username_errors' ); ?>
-						<input type="text" name="signup_username" id="signup_username" value="<?php bp_signup_username_value(); ?>" class="form-control form-control-custom" required/>
-					</div>
-					<div class="form-group form-group-custom">
-						<label class="label-custom" for="signup_password">
-							<?php _e( 'Password', 'buddypress' ); ?> 
-						</label>
-						<?php do_action( 'bp_signup_password_errors' ); ?>
-						<input type="password" name="signup_password" id="signup_password" value="" class="form-control form-control-custom" required/>
-					</div>
+			<form id="signup_form" method="post" action="register">
+				<p class="status"></p>
+				<div class="form-group form-group-custom">
+					<label class="label-custom" for="signup_email">
+						<?php _e( 'Email', 'buddypress' ); ?>
+					</label>
+					<?php do_action( 'bp_signup_email_errors' ); ?>
+					<input type="email" name="signup_email" id="signup_email" value="<?php bp_signup_email_value(); ?>" class="form-control form-control-custom" required/>
+				</div>
+				<div class="form-group form-group-custom">
+					<label class="label-custom" for="signup_username">
+						<?php _e( 'Username', 'buddypress' ); ?> 
+					</label>
+					<?php do_action( 'bp_signup_username_errors' ); ?>
+					<input type="text" name="signup_username" id="signup_username" value="<?php bp_signup_username_value(); ?>" class="form-control form-control-custom" required/>
+				</div>
+				<div class="form-group form-group-custom">
+					<label class="label-custom" for="signup_password">
+						<?php _e( 'Password', 'buddypress' ); ?> 
+					</label>
+					<?php do_action( 'bp_signup_password_errors' ); ?>
+					<input type="password" name="signup_password" id="signup_password" value="" class="form-control form-control-custom" required/>
+				</div>
 
-					<div class="radio radio-custom">
-						<label class="radio-label-custom" style="display: inline-block; margin-right: 20px;">
-							<input class="input-radio-custom" type="radio" name="signup_category" value="cat" id="cat" style="display: block;" required>
-							<span class="radio-span-custom">Cat</span>
-						</label>
-						<label class="radio-label-custom" style="display: inline-block;">
-							<input class="input-radio-custom" type="radio" name="signup_category" value="dog" id="dog" style="display: block;" required>
-							<span class="radio-span-custom">Dog</span>
-						</label>
-					</div>
-					
-					<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-					<center><input type="submit" name="signup_submit" class="btn btn-register" id="signup_submit" value="<?php _e( "Thank's", "buddypress" ); ?>" /></center>
+				<div class="radio radio-custom">
+					<label class="radio-label-custom" style="display: inline-block; margin-right: 20px;">
+						<input class="input-radio-custom" type="radio" name="signup_category" value="cat" id="cat" style="display: block;" required>
+						<span class="radio-span-custom">Cat</span>
+					</label>
+					<label class="radio-label-custom" style="display: inline-block;">
+						<input class="input-radio-custom" type="radio" name="signup_category" value="dog" id="dog" style="display: block;" required>
+						<span class="radio-span-custom">Dog</span>
+					</label>
+				</div>
+				
+				<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+				<center><input type="submit" name="signup_submit" class="btn btn-register" id="signup_submit" value="<?php _e( "Thank's", "buddypress" ); ?>" /></center>
 
-					<?php do_action( 'bp_after_registration_submit_buttons' ); ?>
-			
-					<?php wp_nonce_field( 'bp_new_signup' ); ?>
-				</form>
+				<?php do_action( 'bp_after_registration_submit_buttons' ); ?>
+		
+				<?php wp_nonce_field( 'bp_new_signup' ); ?>
+			</form>
+			<div class="loader" style="background: url('<?php echo get_template_directory_uri(); ?>/images/spinner.gif'); background-repeat: no-repeat; background-position: 50%; height: 20px; margin-top: 10px; display: none;"></div>
 		</div>
 	</div>
 </div>
@@ -267,6 +268,7 @@
 				<center style="margin-top:5px"><input type="submit" class="btn btn-register" name="submit" value="Submit"></center>
 				<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
 			</form>
+			<div class="loader" style="background: url('<?php echo get_template_directory_uri(); ?>/images/spinner.gif'); background-repeat: no-repeat; background-position: 50%; height: 20px; margin-top: 10px; display: none;"></div>
 		</div>
 	</div>
 </div>
@@ -307,6 +309,7 @@
 
 				<center><input class="btn btn-upload-dashboard" type="submit" name="wp-submit" id="wp-submit" value="post"></center>
 			</form>
+			<div class="loader" style="background: url('<?php echo get_template_directory_uri(); ?>/images/spinner.gif'); background-repeat: no-repeat; background-position: 50%; height: 20px; margin-top: 10px; display: none;"></div>
 		</div>
 	</div>
 </div>

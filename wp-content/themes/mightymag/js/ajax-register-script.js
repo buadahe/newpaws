@@ -51,6 +51,13 @@ jQuery(document).ready(function($) {
 
     // Perform AJAX register on form submit
     jQuery('#signup_form').on('submit', function(e){
+        jQuery('#signup_form').hide();
+        jQuery('#signup_form').parent('.modal-content-custom').css({
+            height: '50px',
+            width: '50px'
+        });
+        jQuery('#signup_form').siblings('.loader').show();
+
         jQuery('#signup_form p.status').show().text(ajax_login_object.loadingmessage);
         $.ajax({
             type: 'POST',
@@ -65,12 +72,13 @@ jQuery(document).ready(function($) {
                 'security'          : jQuery('#signup_form #security').val() 
             },
             success: function(data){
+                alert(data.message);
                 if (data.loggedin == true){
-                    // console.log('sukses');
                     window.location.href = ajax_login_object.redirecturl;
                 }else{
-                    // console.log('gagal');
-                    alert(data.message);
+                    jQuery('#signup_form').show();
+                    jQuery('#signup_form').parent('.modal-content-custom-profile').css('height', 'auto');
+                    jQuery('#signup_form').siblings('.loader').hide();
                 }
             }
         });
@@ -79,6 +87,10 @@ jQuery(document).ready(function($) {
 
     // Perform AJAX profile on form submit
     jQuery('#profile_form').on('submit', function(e){
+        jQuery('#profile_form').hide();
+        jQuery('#profile_form').parent('.modal-content-custom-profile').css('height', '50px');
+        jQuery('#profile_form').siblings('.loader').show();
+
         $.ajax({
             type: 'POST',
             dataType: 'json',
@@ -94,13 +106,24 @@ jQuery(document).ready(function($) {
                 'security'          : jQuery('#profile_form #security').val() 
             },
             success: function(data){
-                alert('Profile updated.');
+                if (data.status == 'success'){
+                    alert(data.message);
+                }else{
+                    alert('Refresh page and update profile again.');
+                }
+                jQuery('#profile_form').show();
+                jQuery('#profile_form').parent('.modal-content-custom-profile').css('height', 'auto');
+                jQuery('#profile_form').siblings('.loader').hide();
             }
         });
         e.preventDefault();
     });
 
     jQuery('#dashboard_form').on('submit', function(e){
+        jQuery('#dashboard_form').hide();
+        jQuery('#dashboard_form').parent('.modal-content-custom-dashboard').css('height', '50px');
+        jQuery('#dashboard_form').siblings('.loader').show();
+
         var formData = new FormData();
         formData.append('action', 'ajaxdashboard');
         formData.append("foto", $('#dashboard_form #file-input-dashboard')[0].files[0]);
@@ -116,14 +139,16 @@ jQuery(document).ready(function($) {
             processData: false,
             data: formData,
             success: function(data){
-                console.log(data);
+                data = JSON.parse(data);
                 if (data.status == 'success'){
-                    alert('sukses');
-                    // alert(data.message);
+                    alert(data.message);
                 }else{
-                    alert('error');
-                    // alert('Refresh and add image again.');
+                    alert('Refresh page and add image again.');
                 }
+                jQuery('#dashboard_form #caption').val('');
+                jQuery('#dashboard_form').show();
+                jQuery('#dashboard_form').parent('.modal-content-custom-dashboard').css('height', '281px');
+                jQuery('#dashboard_form').siblings('.loader').hide();
             }
         });
         e.preventDefault();
