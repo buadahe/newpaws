@@ -127,48 +127,49 @@
 
 		<!-- Modal content-->
 		<div class="modal-content modal-content-custom">
-				<form id="signup_form" method="post" action="register">
-					<p class="status"></p>
-					<div class="form-group form-group-custom">
-						<label class="label-custom" for="signup_email">
-							<?php _e( 'Email', 'buddypress' ); ?>
-						</label>
-						<?php do_action( 'bp_signup_email_errors' ); ?>
-						<input type="email" name="signup_email" id="signup_email" value="<?php bp_signup_email_value(); ?>" class="form-control form-control-custom" required/>
-					</div>
-					<div class="form-group form-group-custom">
-						<label class="label-custom" for="signup_username">
-							<?php _e( 'Username', 'buddypress' ); ?> 
-						</label>
-						<?php do_action( 'bp_signup_username_errors' ); ?>
-						<input type="text" name="signup_username" id="signup_username" value="<?php bp_signup_username_value(); ?>" class="form-control form-control-custom" required/>
-					</div>
-					<div class="form-group form-group-custom">
-						<label class="label-custom" for="signup_password">
-							<?php _e( 'Password', 'buddypress' ); ?> 
-						</label>
-						<?php do_action( 'bp_signup_password_errors' ); ?>
-						<input type="password" name="signup_password" id="signup_password" value="" class="form-control form-control-custom" required/>
-					</div>
+			<form id="signup_form" method="post" action="register">
+				<p class="status"></p>
+				<div class="form-group form-group-custom">
+					<label class="label-custom" for="signup_email">
+						<?php _e( 'Email', 'buddypress' ); ?>
+					</label>
+					<?php do_action( 'bp_signup_email_errors' ); ?>
+					<input type="email" name="signup_email" id="signup_email" value="<?php bp_signup_email_value(); ?>" class="form-control form-control-custom" required/>
+				</div>
+				<div class="form-group form-group-custom">
+					<label class="label-custom" for="signup_username">
+						<?php _e( 'Username', 'buddypress' ); ?> 
+					</label>
+					<?php do_action( 'bp_signup_username_errors' ); ?>
+					<input type="text" name="signup_username" id="signup_username" value="<?php bp_signup_username_value(); ?>" class="form-control form-control-custom" required/>
+				</div>
+				<div class="form-group form-group-custom">
+					<label class="label-custom" for="signup_password">
+						<?php _e( 'Password', 'buddypress' ); ?> 
+					</label>
+					<?php do_action( 'bp_signup_password_errors' ); ?>
+					<input type="password" name="signup_password" id="signup_password" value="" class="form-control form-control-custom" required/>
+				</div>
 
-					<div class="radio radio-custom">
-						<label class="radio-label-custom" style="display: inline-block; margin-right: 20px;">
-							<input class="input-radio-custom" type="radio" name="signup_category" value="cat" id="cat" style="display: block;" required>
-							<span class="radio-span-custom">Cat</span>
-						</label>
-						<label class="radio-label-custom" style="display: inline-block;">
-							<input class="input-radio-custom" type="radio" name="signup_category" value="dog" id="dog" style="display: block;" required>
-							<span class="radio-span-custom">Dog</span>
-						</label>
-					</div>
-					
-					<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
-					<center><input type="submit" name="signup_submit" class="btn btn-register" id="signup_submit" value="<?php _e( "Thank's", "buddypress" ); ?>" /></center>
+				<div class="radio radio-custom">
+					<label class="radio-label-custom" style="display: inline-block; margin-right: 20px;">
+						<input class="input-radio-custom" type="radio" name="signup_category" value="cat" id="cat" style="display: block;" required>
+						<span class="radio-span-custom">Cat</span>
+					</label>
+					<label class="radio-label-custom" style="display: inline-block;">
+						<input class="input-radio-custom" type="radio" name="signup_category" value="dog" id="dog" style="display: block;" required>
+						<span class="radio-span-custom">Dog</span>
+					</label>
+				</div>
+				
+				<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+				<center><input type="submit" name="signup_submit" class="btn btn-register" id="signup_submit" value="<?php _e( "Thank's", "buddypress" ); ?>" /></center>
 
-					<?php do_action( 'bp_after_registration_submit_buttons' ); ?>
-			
-					<?php wp_nonce_field( 'bp_new_signup' ); ?>
-				</form>
+				<?php do_action( 'bp_after_registration_submit_buttons' ); ?>
+		
+				<?php wp_nonce_field( 'bp_new_signup' ); ?>
+			</form>
+			<div class="loader" style="background: url('<?php echo get_template_directory_uri(); ?>/images/spinner.gif'); background-repeat: no-repeat; background-position: 50%; height: 20px; margin-top: 10px; display: none;"></div>
 		</div>
 	</div>
 </div>
@@ -214,56 +215,60 @@
 <!-- Modal Profile -->
 <div id="my-profile" class="modal fade" role="dialog">
 	<div class="modal-dialog">
-
-		<!-- Modal content-->
 		<div class="modal-content modal-content-custom-profile">
-			<form id="registerss" action="register" method="post">
-				<p class="status"></p>
+			<form id="profile_form" action="register" method="post">
 				<?php $current_user = wp_get_current_user();
 				if ( 0 !== $current_user->ID ) {
 				?>
-						<div class="avatar-custom-profile">
-							<?php bp_activity_avatar( 'user_id=' . $current_user->ID ); ?>
-						</div>
+				<div class="avatar-custom-profile">
+					<?php bp_activity_avatar( 'user_id=' . $current_user->ID ); ?>
+				</div>
 				<?php } ?>
 				<div class="form-group form-group-custom">
-
-					<input name="email" placeholder="<?php  echo $current_user->user_login ?>" type="text" class="form-control form-control-custom-profile" id="email" disabled>
+					<input name="username" placeholder="<?php echo $current_user->user_login ?>" type="text" class="form-control form-control-custom-profile" id="username" readonly>
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Jenisnya" type="text" class="form-control form-control-custom-profile" id="name">
+					<input name="jenis" placeholder="Jenisnya" type="text" class="form-control form-control-custom-profile" id="jenis" value="<?php echo get_user_meta( $current_user->ID, 'profile_jenis', true );  ?>" required>
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Date Of Born" type="text" class="form-control form-control-custom-profile" id="name">
+					<input name="date-of-born" placeholder="Date Of Born" type="date" class="form-control form-control-custom-profile" id="date-of-born" value="<?php echo get_user_meta( $current_user->ID, 'profile_date-of-born', true );  ?>" required>
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Jenis Kelamin" type="text" class="form-control form-control-custom-profile" id="name">
+					<label for="jenis_kelamin">Jenis Kelamin</label>
+					<select name="jenis_kelamin" class="form-control form-control-custom-profile" id="jenis_kelamin" required style="height: 30px; text-align: center;">
+						<option value="L" <?php echo (get_user_meta( $current_user->ID, 'profile_jenis_kelamin', true ) == 'L') ? 'selected' : '' ; ?>>L</option>
+						<option value="P" <?php echo (get_user_meta( $current_user->ID, 'profile_jenis_kelamin', true ) == 'P') ? 'selected' : '' ; ?>>P</option>
+					</select>
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Warna" type="text" class="form-control form-control-custom-profile" id="name">
+					<input name="warna" placeholder="Warna" type="text" class="form-control form-control-custom-profile" value="<?php echo get_user_meta( $current_user->ID, 'profile_warna', true );  ?>" id="warna">
 				</div>
 				<div class="form-group form-group-custom">
-
-					<input name="name" placeholder="Berat" type="text" class="form-control form-control-custom-profile" id="name">
+					<input name="berat" placeholder="Berat" type="text" class="form-control form-control-custom-profile" value="<?php echo get_user_meta( $current_user->ID, 'profile_berat', true );  ?>" id="berat">
 				</div>
-				<label class="text-field-custom" for="category">Stambum</label>
+				<div>
+				<label class="text-field-custom" for="stambum">Stambum</label>
 				<div class="radio radio-custom">
 					<label class="radio-label-custom-profile">
-						<input class="input-radio-custom" type="radio" name="category" value="Yes" id="category">
+						<input class="input-radio-custom" type="radio" name="stambum" value="Yes" id="stambum_yes" required="" <?php echo (get_user_meta( $current_user->ID, 'profile_stambum', true ) == 'Yes') ? 'checked' : '' ; ?>>
 						<span class="radio-span-custom">Yes</span>
 					</label>
 					<label class="radio-label-custom-profile">
-						<input class="input-radio-custom" type="radio" name="category" value="No" id="category">
+						<input class="input-radio-custom" type="radio" name="stambum" value="No" id="stambum_no" required="" <?php echo (get_user_meta( $current_user->ID, 'profile_stambum', true ) == 'No') ? 'checked' : '' ; ?>>
 						<span class="radio-span-custom">No</span>
 					</label>
+					<?php 
+						if (get_user_meta($user_id, 'profile_stambum')) {
+							echo "adda";
+							echo (get_user_meta( $current_user->ID, 'profile_stambum', true ));							
+						}
+					 ?>
+				</div>
 				</div>
 				<center style="margin-top:5px"><input type="submit" class="btn btn-register" name="submit" value="Submit"></center>
 				<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
 			</form>
+			<div class="loader" style="background: url('<?php echo get_template_directory_uri(); ?>/images/spinner.gif'); background-repeat: no-repeat; background-position: 50%; height: 20px; margin-top: 10px; display: none;"></div>
 		</div>
 	</div>
 </div>
@@ -271,10 +276,9 @@
 <!-- Modal Dashboard -->
 <div id="my-dashboard" class="modal fade" role="dialog">
 	<div class="modal-dialog">
-
 		<!-- Modal content-->
 		<div class="modal-content modal-content-custom-dashboard">
-			<form id="dashboard-form" action="" method="post">
+			<form id="dashboard_form" action="" method="post">
 				<p class="status"></p>
 				<?php $current_user = wp_get_current_user();
 				if ( 0 !== $current_user->ID ) {
@@ -294,20 +298,30 @@
 				        	<img src="https://s24.postimg.org/vgckfdvtx/upload_file_large_icon.jpg"/>
 					    </label>
 
-					    <input id="file-input-dashboard" type="file"/>
+					    <input id="file-input-dashboard" type="file" name="foto" />
 					</div>
 				</div>
 
 				<div class="form-group form-group-upload-caption">
 					<p class="caption-text-header">Caption Teks</p>
-					<input type="text" name="" class="form-control form-control-caption-text">
-					<input type="text" name="" class="form-control form-control-caption-text">
+					<input type="text" name="caption" class="form-control form-control-caption-text" id="caption">
 				</div>	
 
 				<center><input class="btn btn-upload-dashboard" type="submit" name="wp-submit" id="wp-submit" value="post"></center>
 			</form>
+			<div class="loader" style="background: url('<?php echo get_template_directory_uri(); ?>/images/spinner.gif'); background-repeat: no-repeat; background-position: 50%; height: 20px; margin-top: 10px; display: none;"></div>
 		</div>
 	</div>
+</div>
+
+<div id="popup" class="modal fade" role="dialog" >
+  <div class="modal-dialog" style="margin: 120px auto;">
+    <div class="modal-content">
+        <div class="modal-body" style="padding: 5px;">
+            <img src="//placehold.it/1000x600" class="img-responsive" style="margin: auto;">
+        </div>
+    </div>
+  </div>
 </div>
 
 </body>
