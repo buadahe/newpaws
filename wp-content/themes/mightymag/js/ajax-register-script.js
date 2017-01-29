@@ -154,6 +154,15 @@ jQuery(document).ready(function($) {
         e.preventDefault();
     });
 
+    /**
+     * Function for gallery
+     */
+    
+    jQuery('#gallery .thumbnail').on('click', function(e){
+        var src = $(this).children('.img-responsive').attr('src');
+        $('#popup .img-responsive').attr('src', src);
+        e.preventDefault();
+    });
     
 
 });

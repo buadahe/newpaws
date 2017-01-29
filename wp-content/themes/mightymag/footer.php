@@ -314,5 +314,15 @@
 	</div>
 </div>
 
+<div id="popup" class="modal fade" role="dialog" >
+  <div class="modal-dialog" style="margin: 120px auto;">
+    <div class="modal-content">
+        <div class="modal-body" style="padding: 5px;">
+            <img src="//placehold.it/1000x600" class="img-responsive" style="margin: auto;">
+        </div>
+    </div>
+  </div>
+</div>
+
 </body>
 </html>
