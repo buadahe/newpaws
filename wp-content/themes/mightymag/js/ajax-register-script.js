@@ -159,8 +159,11 @@ jQuery(document).ready(function($) {
      */
     
     jQuery('#gallery .thumbnail').on('click', function(e){
-        var src = $(this).children('.img-responsive').attr('src');
+        var src     = $(this).children('.img-responsive').attr('src');
+        var caption = $(this).children('.caption').children('p').text();
+        
         $('#popup .img-responsive').attr('src', src);
+        $('#popup .modal-footer p').text(caption)
         e.preventDefault();
     });
     
