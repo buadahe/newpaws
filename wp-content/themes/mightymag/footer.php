@@ -273,6 +273,80 @@
 	</div>
 </div>
 
+<!-- Modal Profile -->
+<div id="add-pet" class="modal fade" role="dialog">
+	<div class="modal-dialog">
+		<div class="modal-content modal-content-custom-profile">
+			<form id="addpet_form" action="register" method="post">
+				<?php $current_user = wp_get_current_user();
+				if ( 0 !== $current_user->ID ) {
+					?>
+					<div class="avatar-custom-profile">
+						<?php bp_activity_avatar( 'user_id=' . $current_user->ID ); ?>
+					</div>
+				<?php } ?>
+				<div class="form-group form-group-custom">
+					<input name="username" placeholder="<?php echo $current_user->user_login ?>" type="text" class="form-control form-control-custom-profile" id="username" readonly>
+				</div>
+				<div class="form-group form-group-custom">
+					<input name="nama" placeholder="Nama Pet" type="text" class="form-control form-control-custom-profile" id="pet_nama" value="<?php echo get_user_meta( $current_user->ID, 'pet_nama', true );  ?>" required>
+				</div>
+				<div class="form-group form-group-custom">
+					<input name="alamat" placeholder="Alamat" type="text" class="form-control form-control-custom-profile" id="pet_alamat" value="<?php echo get_user_meta( $current_user->ID, 'pet_alamat', true );  ?>" required>
+				</div>
+				<div class="form-group form-group-custom">
+					<input name="jenis" placeholder="Jenisnya" type="text" class="form-control form-control-custom-profile" id="pet_jenis" value="<?php echo get_user_meta( $current_user->ID, 'pet_jenis', true );  ?>" required>
+				</div>
+				<div class="form-group form-group-custom">
+					<input name="tanggal_lahir" placeholder="Date Of Born" type="date" class="form-control form-control-custom-profile" id="pet_tanggal_lahir" value="<?php echo get_user_meta( $current_user->ID, 'pet_tanggal_lahir', true );  ?>" required>
+				</div>
+				<div class="form-group form-group-custom">
+					<label for="jenis_kelamin">Jenis Kelamin</label>
+					<select name="jenis_kelamin" class="form-control form-control-custom-profile" id="pet_jenis_kelamin" required style="height: 30px; text-align: center;">
+						<option value="L" <?php echo (get_user_meta( $current_user->ID, 'pet_jenis_kelamin', true ) == 'L') ? 'selected' : '' ; ?>>L</option>
+						<option value="P" <?php echo (get_user_meta( $current_user->ID, 'pet_jenis_kelamin', true ) == 'P') ? 'selected' : '' ; ?>>P</option>
+					</select>
+				</div>
+
+				<div class="form-group form-group-custom">
+					<label for="berat_badan">Berat Badan</label>
+					<select name="berat_badan" class="form-control form-control-custom-profile" id="pet_berat_badan" required style="height: 30px; text-align: center;">
+						<option value="0" <?php echo (get_user_meta( $current_user->ID, 'pet_berat_badan', true ) == '0') ? 'selected' : '' ; ?>>0 - 5 Kg</option>
+						<option value="5" <?php echo (get_user_meta( $current_user->ID, 'pet_berat_badan', true ) == '5') ? 'selected' : '' ; ?>>5 - 10 Kg</option>
+						<option value="10" <?php echo (get_user_meta( $current_user->ID, 'pet_berat_badan', true ) == '10') ? 'selected' : '' ; ?>>10 - 15 Kg</option>
+						<option value="15" <?php echo (get_user_meta( $current_user->ID, 'pet_berat_badan', true ) == '15') ? 'selected' : '' ; ?>> >15 Kg</option>
+					</select>
+				</div>
+				<div class="form-group form-group-custom">
+					<input name="warna" placeholder="Warna" type="text" class="form-control form-control-custom-profile" value="<?php echo get_user_meta( $current_user->ID, 'pet_warna', true );  ?>" id="pet_warna">
+				</div>
+				<div>
+					<label class="text-field-custom" for="stambum">Stambum</label>
+					<div class="radio radio-custom">
+						<label class="radio-label-custom-profile">
+							<input class="input-radio-custom" type="radio" name="stambum" value="Yes" id="pet_stambum_yes" required="" <?php echo (get_user_meta( $current_user->ID, 'pet_stambum', true ) == 'Yes') ? 'checked' : '' ; ?>>
+							<span class="radio-span-custom">Yes</span>
+						</label>
+						<label class="radio-label-custom-profile">
+							<input class="input-radio-custom" type="radio" name="stambum" value="No" id="pet_stambum_no" required="" <?php echo (get_user_meta( $current_user->ID, 'pet_stambum', true ) == 'No') ? 'checked' : '' ; ?>>
+							<span class="radio-span-custom">No</span>
+						</label>
+						<?php
+						if (get_user_meta($user_id, 'pet_stambum')) {
+							echo "adda";
+							echo (get_user_meta( $current_user->ID, 'pet_stambum', true ));
+						}
+						?>
+					</div>
+				</div>
+				<center style="margin-top:5px"><input type="submit" class="btn btn-register" name="submit" value="Submit"></center>
+				<?php wp_nonce_field( 'ajax-login-nonce', 'security' ); ?>
+			</form>
+			<div class="loader" style="background: url('<?php echo get_template_directory_uri(); ?>/images/spinner.gif'); background-repeat: no-repeat; background-position: 50%; height: 20px; margin-top: 10px; display: none;"></div>
+		</div>
+	</div>
+</div>
+
 <!-- Modal Dashboard -->
 <div id="my-dashboard" class="modal fade" role="dialog">
 	<div class="modal-dialog">

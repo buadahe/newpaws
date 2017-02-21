@@ -17,6 +17,7 @@ function ajax_register_init()
     add_action('wp_ajax_nopriv_ajaxregister', 'ajax_register');
     add_action('wp_ajax_ajaxprofile', 'ajax_profile');
     add_action('wp_ajax_ajaxdashboard', 'ajax_dashboard');
+    add_action('wp_ajax_ajaxaddpet', 'ajax_addpet');
 }
 
 function ajax_register()
@@ -124,6 +125,80 @@ function ajax_profile()
     }
 
     echo json_encode(array('status' => 'success', 'message' => __('Profile updated!')));
+    die();
+}
+
+function ajax_addpet()
+{
+
+    //    // Nonce is checked, get the POST data and sign user on
+    $info = array();
+    $info['pet_nama']          = $_POST['pet_nama'];
+    $info['pet_alamat']          = $_POST['pet_alamat'];
+    $info['pet_jenis']          = $_POST['pet_jenis'];
+    $info['pet_tanggal_lahir']   = $_POST['pet_tanggal_lahir'];
+    $info['pet_jenis_kelamin']  = $_POST['pet_jenis_kelamin'];
+    $info['pet_warna']          = $_POST['pet_warna'];
+    $info['pet_berat_badan']    = $_POST['pet_berat_badan'];
+    $info['pet_stambum'] 	    = $_POST['pet_stambum'];
+
+    echo $info['pet_tanggal_lahir'];
+
+    //    // First check the nonce, if it fails the function will be break
+    check_ajax_referer('ajax-login-nonce', 'security');
+
+    $current_user   = wp_get_current_user();
+    $user_id        = $current_user->ID;
+
+    if (!get_user_meta($user_id, 'pet_nama')) {
+        add_user_meta( $user_id, 'pet_nama', $info['pet_nama'] );
+    }else{
+        update_user_meta( $user_id, 'pet_nama', $info['pet_nama'] );
+    }
+
+    if (!get_user_meta($user_id, 'pet_alamat')) {
+        add_user_meta( $user_id, 'pet_alamat', $info['pet_alamat'] );
+    }else{
+        update_user_meta( $user_id, 'pet_alamat', $info['pet_alamat'] );
+    }
+
+    if (!get_user_meta($user_id, 'pet_jenis')) {
+        add_user_meta( $user_id, 'pet_jenis', $info['pet_jenis'] );
+    }else{
+        update_user_meta( $user_id, 'pet_jenis', $info['pet_jenis'] );
+    }
+
+    if (!get_user_meta($user_id, 'pet_tanggal_lahir')) {
+        add_user_meta( $user_id, 'pet_tanggal_lahir', $info['pet_tanggal_lahir'] );
+    }else{
+        update_user_meta( $user_id, 'pet_tanggal_lahir', $info['pet_tanggal_lahir'] );
+    }
+
+    if (!get_user_meta($user_id, 'pet_jenis_kelamin')) {
+        add_user_meta( $user_id, 'pet_jenis_kelamin', $info['pet_jenis_kelamin'] );
+    }else{
+        update_user_meta( $user_id, 'pet_jenis_kelamin', $info['pet_jenis_kelamin'] );
+    }
+
+    if (!get_user_meta($user_id, 'pet_warna')) {
+        add_user_meta( $user_id, 'pet_warna', $info['pet_warna'] );
+    }else{
+        update_user_meta( $user_id, 'pet_warna', $info['pet_warna'] );
+    }
+
+    if (!get_user_meta($user_id, 'pet_berat_badan')) {
+        add_user_meta( $user_id, 'pet_berat_badan', $info['pet_berat_badan'] );
+    }else{
+        update_user_meta( $user_id, 'pet_berat_badan', $info['pet_berat_badan'] );
+    }
+
+    if (!get_user_meta($user_id, 'pet_stambum')) {
+        add_user_meta( $user_id, 'pet_stambum', $info['pet_stambum'] );
+    }else{
+        update_user_meta( $user_id, 'pet_stambum', $info['pet_stambum'] );
+    }
+
+    echo json_encode(array('status' => 'success', 'message' => __('Pet added!')));
     die();
 }
 

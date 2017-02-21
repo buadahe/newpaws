@@ -119,6 +119,42 @@ jQuery(document).ready(function($) {
         e.preventDefault();
     });
 
+    // Perform AJAX profile on form submit
+    jQuery('#addpet_form').on('submit', function(e){
+        jQuery('#addpet_form').hide();
+        jQuery('#addpet_form').parent('.modal-content-custom-profile').css('height', '50px');
+        jQuery('#addpet_form').siblings('.loader').show();
+
+        $.ajax({
+            type: 'POST',
+            dataType: 'json',
+            url: ajax_login_object.ajaxurl,
+            data: {
+                'action'            : 'ajaxaddpet', //calls wp_ajax_nopriv_ajaxlogin
+                'pet_nama'              : jQuery('#addpet_form #pet_nama').val(),
+                'pet_alamat'            : jQuery('#addpet_form #pet_alamat').val(),
+                'pet_jenis'             : jQuery('#addpet_form #pet_jenis').val(),
+                'pet_tanggal_lahir'      : jQuery('#addpet_form #pet_tanggal_lahir').val(),
+                'pet_jenis_kelamin'     : jQuery('#addpet_form #pet_jenis_kelamin').val(),
+                'pet_warna'             : jQuery('#addpet_form #pet_warna').val(),
+                'pet_berat_badan'             : jQuery('#addpet_form #pet_berat_badan').val(),
+                'pet_stambum'           : jQuery('#addpet_form input[name=stambum]:checked').val(),
+                'security'          : jQuery('#addpet_form #security').val()
+            },
+            success: function(data){
+                if (data.status == 'success'){
+                    alert(data.message);
+                }else{
+                    alert('Refresh page and add pet again.');
+                }
+                jQuery('#addpet_form').show();
+                jQuery('#addpet_form').parent('.modal-content-custom-profile').css('height', 'auto');
+                jQuery('#addpet_form').siblings('.loader').hide();
+            }
+        });
+        e.preventDefault();
+    });
+
     jQuery('#dashboard_form').on('submit', function(e){
         jQuery('#dashboard_form').hide();
         jQuery('#dashboard_form').parent('.modal-content-custom-dashboard').css('height', '50px');

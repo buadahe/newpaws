@@ -36,6 +36,12 @@ if ( 0 == $current_user->ID ) {
 				</a>
 			</li>
 			<li class="subdropmenu-item">
+				<i class="subdropmenu-icon fa fa-user"></i>
+				<a data-toggle="modal" data-target="#add-pet" class="subdropmenu-link">
+					Add Pet
+				</a>
+			</li>
+			<li class="subdropmenu-item">
 				<i class="subdropmenu-icon fa fa-dashboard"></i>
 				<a class="subdropmenu-link"
 				<?php 
