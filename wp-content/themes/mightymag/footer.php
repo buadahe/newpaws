@@ -394,6 +394,9 @@
         <div class="modal-body" style="padding: 5px;">
             <img src="//placehold.it/1000x600" class="img-responsive" style="margin: auto;">
         </div>
+        <div class="modal-footer" style="padding: 5px; text-align: left; margin-top: 0;">
+            <p>Caption</p>
+        </div>
     </div>
   </div>
 </div>

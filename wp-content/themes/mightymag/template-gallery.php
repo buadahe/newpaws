@@ -8,7 +8,6 @@ Template Name: Template Gallery
 
 <?php get_header();?>
 
-
 <?php
 $args = array(
     'numberposts'    => -1, // Using -1 loads all posts
@@ -44,9 +43,12 @@ $images = array_filter(get_children($args), function ($img){ return $img->post_a
 					<div class="row">
 					    <?php foreach($image as $img): ?>
 						    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-						        <a href="#" class="thumbnail" data-toggle="modal" data-target="#popup">
+						        <div class="thumbnail" data-toggle="modal" data-target="#popup" style="cursor: pointer;">
 						            <img class="img-responsive" src="<?php echo $img->guid; ?>" alt="<?php echo $img->post_title; ?>" title="<?php echo $img->post_title; ?>">
-						        </a>
+								    <div class="caption" style="padding: 5px 0 0;">
+							        	<p><?php echo $img->post_title; ?></p>
+							        </div>
+						        </div>
 						    </div>
 						<?php endforeach ?>
 					</div>
